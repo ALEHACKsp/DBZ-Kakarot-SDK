@@ -1,0 +1,36 @@
+#pragma once
+
+// Name: DBZKakarot, Version: 1.0.3
+
+#ifdef _MSC_VER
+	#pragma pack(push, 0x8)
+#endif
+
+namespace SDK
+{
+//---------------------------------------------------------------------------
+// Classes
+//---------------------------------------------------------------------------
+
+// BlueprintGeneratedClass Projectile_shoot_BP.Projectile_shoot_BP_C
+// 0x0000 (0x0528 - 0x0528)
+class AProjectile_shoot_BP_C : public AATProjectileBullet
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("BlueprintGeneratedClass Projectile_shoot_BP.Projectile_shoot_BP_C");
+		return ptr;
+	}
+
+
+	void UserConstructionScript();
+};
+
+
+}
+
+#ifdef _MSC_VER
+	#pragma pack(pop)
+#endif
