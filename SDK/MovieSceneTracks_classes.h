@@ -64,30 +64,6 @@ public:
 };
 
 
-// Class MovieSceneTracks.MovieScene3DAttachSection
-// 0x0018 (0x0120 - 0x0108)
-class UMovieScene3DAttachSection : public UMovieScene3DConstraintSection
-{
-public:
-	struct FName                                       AttachSocketName;                                         // 0x0108(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FName                                       AttachComponentName;                                      // 0x0110(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	EAttachmentRule                                    AttachmentLocationRule;                                   // 0x0118(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	EAttachmentRule                                    AttachmentRotationRule;                                   // 0x0119(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	EAttachmentRule                                    AttachmentScaleRule;                                      // 0x011A(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	EDetachmentRule                                    DetachmentLocationRule;                                   // 0x011B(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	EDetachmentRule                                    DetachmentRotationRule;                                   // 0x011C(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	EDetachmentRule                                    DetachmentScaleRule;                                      // 0x011D(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x2];                                       // 0x011E(0x0002) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieScene3DAttachSection");
-		return ptr;
-	}
-
-};
-
-
 // Class MovieSceneTracks.MovieScene3DConstraintTrack
 // 0x0010 (0x0068 - 0x0058)
 class UMovieScene3DConstraintTrack : public UMovieSceneTrack
@@ -1088,6 +1064,30 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneVisibilityTrack");
+		return ptr;
+	}
+
+};
+
+
+// Class MovieSceneTracks.MovieScene3DAttachSection
+// 0x0018 (0x0120 - 0x0108)
+class UMovieScene3DAttachSection : public UMovieScene3DConstraintSection
+{
+public:
+	struct FName                                       AttachSocketName;                                         // 0x0108(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       AttachComponentName;                                      // 0x0110(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	EAttachmentRule                                    AttachmentLocationRule;                                   // 0x0118(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	EAttachmentRule                                    AttachmentRotationRule;                                   // 0x0119(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	EAttachmentRule                                    AttachmentScaleRule;                                      // 0x011A(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	EDetachmentRule                                    DetachmentLocationRule;                                   // 0x011B(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	EDetachmentRule                                    DetachmentRotationRule;                                   // 0x011C(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	EDetachmentRule                                    DetachmentScaleRule;                                      // 0x011D(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x2];                                       // 0x011E(0x0002) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieScene3DAttachSection");
 		return ptr;
 	}
 

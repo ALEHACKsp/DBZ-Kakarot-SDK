@@ -12,20 +12,6 @@ namespace SDK
 // Enums
 //---------------------------------------------------------------------------
 
-// Enum GameplayTags.EGameplayTagQueryExprType
-enum class EGameplayTagQueryExprType : uint8_t
-{
-	EGameplayTagQueryExprType__Undefined = 0,
-	EGameplayTagQueryExprType__AnyTagsMatch = 1,
-	EGameplayTagQueryExprType__AllTagsMatch = 2,
-	EGameplayTagQueryExprType__NoTagsMatch = 3,
-	EGameplayTagQueryExprType__AnyExprMatch = 4,
-	EGameplayTagQueryExprType__AllExprMatch = 5,
-	EGameplayTagQueryExprType__NoExprMatch = 6,
-	EGameplayTagQueryExprType__EGameplayTagQueryExprType_MAX = 7
-};
-
-
 // Enum GameplayTags.EGameplayContainerMatchType
 enum class EGameplayContainerMatchType : uint8_t
 {
@@ -65,6 +51,20 @@ enum class EGameplayTagSourceType : uint8_t
 	EGameplayTagSourceType__DataTable = 4,
 	EGameplayTagSourceType__Invalid = 5,
 	EGameplayTagSourceType__EGameplayTagSourceType_MAX = 6
+};
+
+
+// Enum GameplayTags.EGameplayTagQueryExprType
+enum class EGameplayTagQueryExprType : uint8_t
+{
+	EGameplayTagQueryExprType__Undefined = 0,
+	EGameplayTagQueryExprType__AnyTagsMatch = 1,
+	EGameplayTagQueryExprType__AllTagsMatch = 2,
+	EGameplayTagQueryExprType__NoTagsMatch = 3,
+	EGameplayTagQueryExprType__AnyExprMatch = 4,
+	EGameplayTagQueryExprType__AllExprMatch = 5,
+	EGameplayTagQueryExprType__NoExprMatch = 6,
+	EGameplayTagQueryExprType__EGameplayTagQueryExprType_MAX = 7
 };
 
 

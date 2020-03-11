@@ -973,13 +973,6 @@ struct URichTextBlock_GetDecoratorByClass_Params
 	class URichTextBlockDecorator*                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function UMG.AsyncTaskDownloadImage.DownloadImage
-struct UAsyncTaskDownloadImage_DownloadImage_Params
-{
-	struct FString                                     URL;                                                      // (Parm, ZeroConstructor)
-	class UAsyncTaskDownloadImage*                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
 // Function UMG.PanelWidget.RemoveChildAt
 struct UPanelWidget_RemoveChildAt_Params
 {
@@ -1190,6 +1183,13 @@ struct UBorder_GetDynamicMaterial_Params
 	class UMaterialInstanceDynamic*                    ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function UMG.AsyncTaskDownloadImage.DownloadImage
+struct UAsyncTaskDownloadImage_DownloadImage_Params
+{
+	struct FString                                     URL;                                                      // (Parm, ZeroConstructor)
+	class UAsyncTaskDownloadImage*                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function UMG.BorderSlot.SetVerticalAlignment
 struct UBorderSlot_SetVerticalAlignment_Params
 {
@@ -1212,48 +1212,6 @@ struct UBorderSlot_SetHorizontalAlignment_Params
 struct UBrushBinding_GetValue_Params
 {
 	struct FSlateBrush                                 ReturnValue;                                              // (Parm, OutParm, ReturnParm)
-};
-
-// Function UMG.Button.SetTouchMethod
-struct UButton_SetTouchMethod_Params
-{
-	TEnumAsByte<EButtonTouchMethod>                    InTouchMethod;                                            // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function UMG.Button.SetStyle
-struct UButton_SetStyle_Params
-{
-	struct FButtonStyle                                InStyle;                                                  // (ConstParm, Parm, OutParm, ReferenceParm)
-};
-
-// Function UMG.Button.SetPressMethod
-struct UButton_SetPressMethod_Params
-{
-	TEnumAsByte<EButtonPressMethod>                    InPressMethod;                                            // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function UMG.Button.SetColorAndOpacity
-struct UButton_SetColorAndOpacity_Params
-{
-	struct FLinearColor                                InColorAndOpacity;                                        // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function UMG.Button.SetClickMethod
-struct UButton_SetClickMethod_Params
-{
-	TEnumAsByte<EButtonClickMethod>                    InClickMethod;                                            // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function UMG.Button.SetBackgroundColor
-struct UButton_SetBackgroundColor_Params
-{
-	struct FLinearColor                                InBackgroundColor;                                        // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function UMG.Button.IsPressed
-struct UButton_IsPressed_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function UMG.ButtonSlot.SetVerticalAlignment
@@ -1453,6 +1411,48 @@ struct UColorBinding_GetSlateValue_Params
 struct UColorBinding_GetLinearValue_Params
 {
 	struct FLinearColor                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function UMG.Button.SetTouchMethod
+struct UButton_SetTouchMethod_Params
+{
+	TEnumAsByte<EButtonTouchMethod>                    InTouchMethod;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function UMG.Button.SetStyle
+struct UButton_SetStyle_Params
+{
+	struct FButtonStyle                                InStyle;                                                  // (ConstParm, Parm, OutParm, ReferenceParm)
+};
+
+// Function UMG.Button.SetPressMethod
+struct UButton_SetPressMethod_Params
+{
+	TEnumAsByte<EButtonPressMethod>                    InPressMethod;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function UMG.Button.SetColorAndOpacity
+struct UButton_SetColorAndOpacity_Params
+{
+	struct FLinearColor                                InColorAndOpacity;                                        // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function UMG.Button.SetClickMethod
+struct UButton_SetClickMethod_Params
+{
+	TEnumAsByte<EButtonClickMethod>                    InClickMethod;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function UMG.Button.SetBackgroundColor
+struct UButton_SetBackgroundColor_Params
+{
+	struct FLinearColor                                InBackgroundColor;                                        // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function UMG.Button.IsPressed
+struct UButton_IsPressed_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function UMG.ComboBoxString.SetSelectedOption
@@ -2290,30 +2290,6 @@ struct USafeZone_SetSidesToPad_Params
 	bool                                               InPadBottom;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function UMG.ScaleBox.SetUserSpecifiedScale
-struct UScaleBox_SetUserSpecifiedScale_Params
-{
-	float                                              InUserSpecifiedScale;                                     // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function UMG.ScaleBox.SetStretchDirection
-struct UScaleBox_SetStretchDirection_Params
-{
-	TEnumAsByte<EStretchDirection>                     InStretchDirection;                                       // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function UMG.ScaleBox.SetStretch
-struct UScaleBox_SetStretch_Params
-{
-	TEnumAsByte<EStretch>                              InStretch;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function UMG.ScaleBox.SetIgnoreInheritedScale
-struct UScaleBox_SetIgnoreInheritedScale_Params
-{
-	bool                                               bInIgnoreInheritedScale;                                  // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
 // Function UMG.ScaleBoxSlot.SetVerticalAlignment
 struct UScaleBoxSlot_SetVerticalAlignment_Params
 {
@@ -2421,6 +2397,30 @@ struct UScrollBoxSlot_SetPadding_Params
 struct UScrollBoxSlot_SetHorizontalAlignment_Params
 {
 	TEnumAsByte<EHorizontalAlignment>                  InHorizontalAlignment;                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function UMG.ScaleBox.SetUserSpecifiedScale
+struct UScaleBox_SetUserSpecifiedScale_Params
+{
+	float                                              InUserSpecifiedScale;                                     // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function UMG.ScaleBox.SetStretchDirection
+struct UScaleBox_SetStretchDirection_Params
+{
+	TEnumAsByte<EStretchDirection>                     InStretchDirection;                                       // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function UMG.ScaleBox.SetStretch
+struct UScaleBox_SetStretch_Params
+{
+	TEnumAsByte<EStretch>                              InStretch;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function UMG.ScaleBox.SetIgnoreInheritedScale
+struct UScaleBox_SetIgnoreInheritedScale_Params
+{
+	bool                                               bInIgnoreInheritedScale;                                  // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function UMG.SizeBox.SetWidthOverride
@@ -2760,18 +2760,6 @@ struct USpinBox_ClearMaxSliderValue_Params
 {
 };
 
-// Function UMG.TextBinding.GetTextValue
-struct UTextBinding_GetTextValue_Params
-{
-	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
-};
-
-// Function UMG.TextBinding.GetStringValue
-struct UTextBinding_GetStringValue_Params
-{
-	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
-};
-
 // Function UMG.TextBlock.SetText
 struct UTextBlock_SetText_Params
 {
@@ -2897,29 +2885,16 @@ struct UTreeView_CollapseAll_Params
 {
 };
 
-// Function UMG.UniformGridPanel.SetSlotPadding
-struct UUniformGridPanel_SetSlotPadding_Params
+// Function UMG.TextBinding.GetTextValue
+struct UTextBinding_GetTextValue_Params
 {
-	struct FMargin                                     InSlotPadding;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
 };
 
-// Function UMG.UniformGridPanel.SetMinDesiredSlotWidth
-struct UUniformGridPanel_SetMinDesiredSlotWidth_Params
+// Function UMG.TextBinding.GetStringValue
+struct UTextBinding_GetStringValue_Params
 {
-	float                                              InMinDesiredSlotWidth;                                    // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function UMG.UniformGridPanel.SetMinDesiredSlotHeight
-struct UUniformGridPanel_SetMinDesiredSlotHeight_Params
-{
-	float                                              InMinDesiredSlotHeight;                                   // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function UMG.UniformGridPanel.AddChildToUniformGrid
-struct UUniformGridPanel_AddChildToUniformGrid_Params
-{
-	class UWidget*                                     Content;                                                  // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UUniformGridSlot*                            ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
 };
 
 // Function UMG.UniformGridSlot.SetVerticalAlignment
@@ -3020,6 +2995,31 @@ struct UVisibilityBinding_GetValue_Params
 	ESlateVisibility                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function UMG.UniformGridPanel.SetSlotPadding
+struct UUniformGridPanel_SetSlotPadding_Params
+{
+	struct FMargin                                     InSlotPadding;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function UMG.UniformGridPanel.SetMinDesiredSlotWidth
+struct UUniformGridPanel_SetMinDesiredSlotWidth_Params
+{
+	float                                              InMinDesiredSlotWidth;                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function UMG.UniformGridPanel.SetMinDesiredSlotHeight
+struct UUniformGridPanel_SetMinDesiredSlotHeight_Params
+{
+	float                                              InMinDesiredSlotHeight;                                   // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function UMG.UniformGridPanel.AddChildToUniformGrid
+struct UUniformGridPanel_AddChildToUniformGrid_Params
+{
+	class UWidget*                                     Content;                                                  // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UUniformGridSlot*                            ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
 // Function UMG.WidgetAnimation.GetStartTime
 struct UWidgetAnimation_GetStartTime_Params
 {
@@ -3036,6 +3036,415 @@ struct UWidgetAnimation_GetEndTime_Params
 struct UWidgetBinding_GetValue_Params
 {
 	class UWidget*                                     ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
+// Function UMG.WidgetComponent.SetWidget
+struct UWidgetComponent_SetWidget_Params
+{
+	class UUserWidget*                                 Widget;                                                   // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+};
+
+// Function UMG.WidgetComponent.SetTintColorAndOpacity
+struct UWidgetComponent_SetTintColorAndOpacity_Params
+{
+	struct FLinearColor                                NewTintColorAndOpacity;                                   // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function UMG.WidgetComponent.SetOwnerPlayer
+struct UWidgetComponent_SetOwnerPlayer_Params
+{
+	class ULocalPlayer*                                LocalPlayer;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function UMG.WidgetComponent.SetManuallyRedraw
+struct UWidgetComponent_SetManuallyRedraw_Params
+{
+	bool                                               bUseManualRedraw;                                         // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function UMG.WidgetComponent.SetDrawSize
+struct UWidgetComponent_SetDrawSize_Params
+{
+	struct FVector2D                                   Size;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function UMG.WidgetComponent.SetBackgroundColor
+struct UWidgetComponent_SetBackgroundColor_Params
+{
+	struct FLinearColor                                NewBackgroundColor;                                       // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function UMG.WidgetComponent.RequestRedraw
+struct UWidgetComponent_RequestRedraw_Params
+{
+};
+
+// Function UMG.WidgetComponent.GetUserWidgetObject
+struct UWidgetComponent_GetUserWidgetObject_Params
+{
+	class UUserWidget*                                 ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
+// Function UMG.WidgetComponent.GetRenderTarget
+struct UWidgetComponent_GetRenderTarget_Params
+{
+	class UTextureRenderTarget2D*                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function UMG.WidgetComponent.GetOwnerPlayer
+struct UWidgetComponent_GetOwnerPlayer_Params
+{
+	class ULocalPlayer*                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function UMG.WidgetComponent.GetMaterialInstance
+struct UWidgetComponent_GetMaterialInstance_Params
+{
+	class UMaterialInstanceDynamic*                    ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function UMG.WidgetComponent.GetDrawSize
+struct UWidgetComponent_GetDrawSize_Params
+{
+	struct FVector2D                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function UMG.WidgetInteractionComponent.SetCustomHitResult
+struct UWidgetInteractionComponent_SetCustomHitResult_Params
+{
+	struct FHitResult                                  HitResult;                                                // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+};
+
+// Function UMG.WidgetInteractionComponent.SendKeyChar
+struct UWidgetInteractionComponent_SendKeyChar_Params
+{
+	struct FString                                     Characters;                                               // (Parm, ZeroConstructor)
+	bool                                               bRepeat;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function UMG.WidgetInteractionComponent.ScrollWheel
+struct UWidgetInteractionComponent_ScrollWheel_Params
+{
+	float                                              ScrollDelta;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function UMG.WidgetInteractionComponent.ReleasePointerKey
+struct UWidgetInteractionComponent_ReleasePointerKey_Params
+{
+	struct FKey                                        Key;                                                      // (Parm)
+};
+
+// Function UMG.WidgetInteractionComponent.ReleaseKey
+struct UWidgetInteractionComponent_ReleaseKey_Params
+{
+	struct FKey                                        Key;                                                      // (Parm)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function UMG.WidgetInteractionComponent.PressPointerKey
+struct UWidgetInteractionComponent_PressPointerKey_Params
+{
+	struct FKey                                        Key;                                                      // (Parm)
+};
+
+// Function UMG.WidgetInteractionComponent.PressKey
+struct UWidgetInteractionComponent_PressKey_Params
+{
+	struct FKey                                        Key;                                                      // (Parm)
+	bool                                               bRepeat;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function UMG.WidgetInteractionComponent.PressAndReleaseKey
+struct UWidgetInteractionComponent_PressAndReleaseKey_Params
+{
+	struct FKey                                        Key;                                                      // (Parm)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function UMG.WidgetInteractionComponent.IsOverInteractableWidget
+struct UWidgetInteractionComponent_IsOverInteractableWidget_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function UMG.WidgetInteractionComponent.IsOverHitTestVisibleWidget
+struct UWidgetInteractionComponent_IsOverHitTestVisibleWidget_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function UMG.WidgetInteractionComponent.IsOverFocusableWidget
+struct UWidgetInteractionComponent_IsOverFocusableWidget_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function UMG.WidgetInteractionComponent.GetLastHitResult
+struct UWidgetInteractionComponent_GetLastHitResult_Params
+{
+	struct FHitResult                                  ReturnValue;                                              // (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, IsPlainOldData)
+};
+
+// Function UMG.WidgetInteractionComponent.GetHoveredWidgetComponent
+struct UWidgetInteractionComponent_GetHoveredWidgetComponent_Params
+{
+	class UWidgetComponent*                            ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
+// Function UMG.WidgetInteractionComponent.Get2DHitLocation
+struct UWidgetInteractionComponent_Get2DHitLocation_Params
+{
+	struct FVector2D                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function UMG.WidgetLayoutLibrary.SlotAsVerticalBoxSlot
+struct UWidgetLayoutLibrary_SlotAsVerticalBoxSlot_Params
+{
+	class UWidget*                                     Widget;                                                   // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UVerticalBoxSlot*                            ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
+// Function UMG.WidgetLayoutLibrary.SlotAsUniformGridSlot
+struct UWidgetLayoutLibrary_SlotAsUniformGridSlot_Params
+{
+	class UWidget*                                     Widget;                                                   // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UUniformGridSlot*                            ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
+// Function UMG.WidgetLayoutLibrary.SlotAsOverlaySlot
+struct UWidgetLayoutLibrary_SlotAsOverlaySlot_Params
+{
+	class UWidget*                                     Widget;                                                   // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UOverlaySlot*                                ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
+// Function UMG.WidgetLayoutLibrary.SlotAsHorizontalBoxSlot
+struct UWidgetLayoutLibrary_SlotAsHorizontalBoxSlot_Params
+{
+	class UWidget*                                     Widget;                                                   // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UHorizontalBoxSlot*                          ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
+// Function UMG.WidgetLayoutLibrary.SlotAsGridSlot
+struct UWidgetLayoutLibrary_SlotAsGridSlot_Params
+{
+	class UWidget*                                     Widget;                                                   // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UGridSlot*                                   ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
+// Function UMG.WidgetLayoutLibrary.SlotAsCanvasSlot
+struct UWidgetLayoutLibrary_SlotAsCanvasSlot_Params
+{
+	class UWidget*                                     Widget;                                                   // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UCanvasPanelSlot*                            ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
+// Function UMG.WidgetLayoutLibrary.SlotAsBorderSlot
+struct UWidgetLayoutLibrary_SlotAsBorderSlot_Params
+{
+	class UWidget*                                     Widget;                                                   // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UBorderSlot*                                 ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
+// Function UMG.WidgetLayoutLibrary.RemoveAllWidgets
+struct UWidgetLayoutLibrary_RemoveAllWidgets_Params
+{
+	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function UMG.WidgetLayoutLibrary.ProjectWorldLocationToWidgetPosition
+struct UWidgetLayoutLibrary_ProjectWorldLocationToWidgetPosition_Params
+{
+	class APlayerController*                           PlayerController;                                         // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     WorldLocation;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector2D                                   ScreenPosition;                                           // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function UMG.WidgetLayoutLibrary.GetViewportWidgetGeometry
+struct UWidgetLayoutLibrary_GetViewportWidgetGeometry_Params
+{
+	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FGeometry                                   ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
+};
+
+// Function UMG.WidgetLayoutLibrary.GetViewportSize
+struct UWidgetLayoutLibrary_GetViewportSize_Params
+{
+	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector2D                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function UMG.WidgetLayoutLibrary.GetViewportScale
+struct UWidgetLayoutLibrary_GetViewportScale_Params
+{
+	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function UMG.WidgetLayoutLibrary.GetPlayerScreenWidgetGeometry
+struct UWidgetLayoutLibrary_GetPlayerScreenWidgetGeometry_Params
+{
+	class APlayerController*                           PlayerController;                                         // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FGeometry                                   ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
+};
+
+// Function UMG.WidgetLayoutLibrary.GetMousePositionScaledByDPI
+struct UWidgetLayoutLibrary_GetMousePositionScaledByDPI_Params
+{
+	class APlayerController*                           Player;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              LocationX;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              LocationY;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function UMG.WidgetLayoutLibrary.GetMousePositionOnViewport
+struct UWidgetLayoutLibrary_GetMousePositionOnViewport_Params
+{
+	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector2D                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function UMG.WidgetLayoutLibrary.GetMousePositionOnPlatform
+struct UWidgetLayoutLibrary_GetMousePositionOnPlatform_Params
+{
+	struct FVector2D                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function UMG.WidgetSwitcher.SetActiveWidgetIndex
+struct UWidgetSwitcher_SetActiveWidgetIndex_Params
+{
+	int                                                Index;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function UMG.WidgetSwitcher.SetActiveWidget
+struct UWidgetSwitcher_SetActiveWidget_Params
+{
+	class UWidget*                                     Widget;                                                   // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+};
+
+// Function UMG.WidgetSwitcher.GetWidgetAtIndex
+struct UWidgetSwitcher_GetWidgetAtIndex_Params
+{
+	int                                                Index;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	class UWidget*                                     ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
+// Function UMG.WidgetSwitcher.GetNumWidgets
+struct UWidgetSwitcher_GetNumWidgets_Params
+{
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function UMG.WidgetSwitcher.GetActiveWidgetIndex
+struct UWidgetSwitcher_GetActiveWidgetIndex_Params
+{
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function UMG.WidgetSwitcher.GetActiveWidget
+struct UWidgetSwitcher_GetActiveWidget_Params
+{
+	class UWidget*                                     ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
+// Function UMG.WidgetSwitcherSlot.SetVerticalAlignment
+struct UWidgetSwitcherSlot_SetVerticalAlignment_Params
+{
+	TEnumAsByte<EVerticalAlignment>                    InVerticalAlignment;                                      // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function UMG.WidgetSwitcherSlot.SetPadding
+struct UWidgetSwitcherSlot_SetPadding_Params
+{
+	struct FMargin                                     InPadding;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function UMG.WidgetSwitcherSlot.SetHorizontalAlignment
+struct UWidgetSwitcherSlot_SetHorizontalAlignment_Params
+{
+	TEnumAsByte<EHorizontalAlignment>                  InHorizontalAlignment;                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function UMG.WindowTitleBarArea.SetVerticalAlignment
+struct UWindowTitleBarArea_SetVerticalAlignment_Params
+{
+	TEnumAsByte<EVerticalAlignment>                    InVerticalAlignment;                                      // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function UMG.WindowTitleBarArea.SetPadding
+struct UWindowTitleBarArea_SetPadding_Params
+{
+	struct FMargin                                     InPadding;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function UMG.WindowTitleBarArea.SetHorizontalAlignment
+struct UWindowTitleBarArea_SetHorizontalAlignment_Params
+{
+	TEnumAsByte<EHorizontalAlignment>                  InHorizontalAlignment;                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function UMG.WindowTitleBarAreaSlot.SetVerticalAlignment
+struct UWindowTitleBarAreaSlot_SetVerticalAlignment_Params
+{
+	TEnumAsByte<EVerticalAlignment>                    InVerticalAlignment;                                      // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function UMG.WindowTitleBarAreaSlot.SetPadding
+struct UWindowTitleBarAreaSlot_SetPadding_Params
+{
+	struct FMargin                                     InPadding;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function UMG.WindowTitleBarAreaSlot.SetHorizontalAlignment
+struct UWindowTitleBarAreaSlot_SetHorizontalAlignment_Params
+{
+	TEnumAsByte<EHorizontalAlignment>                  InHorizontalAlignment;                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function UMG.WrapBox.SetInnerSlotPadding
+struct UWrapBox_SetInnerSlotPadding_Params
+{
+	struct FVector2D                                   InPadding;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function UMG.WrapBox.AddChildWrapBox
+struct UWrapBox_AddChildWrapBox_Params
+{
+	class UWidget*                                     Content;                                                  // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWrapBoxSlot*                                ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
+// Function UMG.WrapBoxSlot.SetVerticalAlignment
+struct UWrapBoxSlot_SetVerticalAlignment_Params
+{
+	TEnumAsByte<EVerticalAlignment>                    InVerticalAlignment;                                      // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function UMG.WrapBoxSlot.SetPadding
+struct UWrapBoxSlot_SetPadding_Params
+{
+	struct FMargin                                     InPadding;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function UMG.WrapBoxSlot.SetHorizontalAlignment
+struct UWrapBoxSlot_SetHorizontalAlignment_Params
+{
+	TEnumAsByte<EHorizontalAlignment>                  InHorizontalAlignment;                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function UMG.WrapBoxSlot.SetFillSpanWhenLessThan
+struct UWrapBoxSlot_SetFillSpanWhenLessThan_Params
+{
+	float                                              InFillSpanWhenLessThan;                                   // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function UMG.WrapBoxSlot.SetFillEmptySpace
+struct UWrapBoxSlot_SetFillEmptySpace_Params
+{
+	bool                                               InbFillEmptySpace;                                        // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function UMG.WidgetBlueprintLibrary.UnlockMouse
@@ -3455,415 +3864,6 @@ struct UWidgetBlueprintLibrary_CaptureJoystick_Params
 // Function UMG.WidgetBlueprintLibrary.CancelDragDrop
 struct UWidgetBlueprintLibrary_CancelDragDrop_Params
 {
-};
-
-// Function UMG.WidgetComponent.SetWidget
-struct UWidgetComponent_SetWidget_Params
-{
-	class UUserWidget*                                 Widget;                                                   // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-};
-
-// Function UMG.WidgetComponent.SetTintColorAndOpacity
-struct UWidgetComponent_SetTintColorAndOpacity_Params
-{
-	struct FLinearColor                                NewTintColorAndOpacity;                                   // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function UMG.WidgetComponent.SetOwnerPlayer
-struct UWidgetComponent_SetOwnerPlayer_Params
-{
-	class ULocalPlayer*                                LocalPlayer;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function UMG.WidgetComponent.SetManuallyRedraw
-struct UWidgetComponent_SetManuallyRedraw_Params
-{
-	bool                                               bUseManualRedraw;                                         // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function UMG.WidgetComponent.SetDrawSize
-struct UWidgetComponent_SetDrawSize_Params
-{
-	struct FVector2D                                   Size;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function UMG.WidgetComponent.SetBackgroundColor
-struct UWidgetComponent_SetBackgroundColor_Params
-{
-	struct FLinearColor                                NewBackgroundColor;                                       // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function UMG.WidgetComponent.RequestRedraw
-struct UWidgetComponent_RequestRedraw_Params
-{
-};
-
-// Function UMG.WidgetComponent.GetUserWidgetObject
-struct UWidgetComponent_GetUserWidgetObject_Params
-{
-	class UUserWidget*                                 ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
-};
-
-// Function UMG.WidgetComponent.GetRenderTarget
-struct UWidgetComponent_GetRenderTarget_Params
-{
-	class UTextureRenderTarget2D*                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function UMG.WidgetComponent.GetOwnerPlayer
-struct UWidgetComponent_GetOwnerPlayer_Params
-{
-	class ULocalPlayer*                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function UMG.WidgetComponent.GetMaterialInstance
-struct UWidgetComponent_GetMaterialInstance_Params
-{
-	class UMaterialInstanceDynamic*                    ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function UMG.WidgetComponent.GetDrawSize
-struct UWidgetComponent_GetDrawSize_Params
-{
-	struct FVector2D                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function UMG.WidgetInteractionComponent.SetCustomHitResult
-struct UWidgetInteractionComponent_SetCustomHitResult_Params
-{
-	struct FHitResult                                  HitResult;                                                // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-};
-
-// Function UMG.WidgetInteractionComponent.SendKeyChar
-struct UWidgetInteractionComponent_SendKeyChar_Params
-{
-	struct FString                                     Characters;                                               // (Parm, ZeroConstructor)
-	bool                                               bRepeat;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function UMG.WidgetInteractionComponent.ScrollWheel
-struct UWidgetInteractionComponent_ScrollWheel_Params
-{
-	float                                              ScrollDelta;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function UMG.WidgetInteractionComponent.ReleasePointerKey
-struct UWidgetInteractionComponent_ReleasePointerKey_Params
-{
-	struct FKey                                        Key;                                                      // (Parm)
-};
-
-// Function UMG.WidgetInteractionComponent.ReleaseKey
-struct UWidgetInteractionComponent_ReleaseKey_Params
-{
-	struct FKey                                        Key;                                                      // (Parm)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function UMG.WidgetInteractionComponent.PressPointerKey
-struct UWidgetInteractionComponent_PressPointerKey_Params
-{
-	struct FKey                                        Key;                                                      // (Parm)
-};
-
-// Function UMG.WidgetInteractionComponent.PressKey
-struct UWidgetInteractionComponent_PressKey_Params
-{
-	struct FKey                                        Key;                                                      // (Parm)
-	bool                                               bRepeat;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function UMG.WidgetInteractionComponent.PressAndReleaseKey
-struct UWidgetInteractionComponent_PressAndReleaseKey_Params
-{
-	struct FKey                                        Key;                                                      // (Parm)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function UMG.WidgetInteractionComponent.IsOverInteractableWidget
-struct UWidgetInteractionComponent_IsOverInteractableWidget_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function UMG.WidgetInteractionComponent.IsOverHitTestVisibleWidget
-struct UWidgetInteractionComponent_IsOverHitTestVisibleWidget_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function UMG.WidgetInteractionComponent.IsOverFocusableWidget
-struct UWidgetInteractionComponent_IsOverFocusableWidget_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function UMG.WidgetInteractionComponent.GetLastHitResult
-struct UWidgetInteractionComponent_GetLastHitResult_Params
-{
-	struct FHitResult                                  ReturnValue;                                              // (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, IsPlainOldData)
-};
-
-// Function UMG.WidgetInteractionComponent.GetHoveredWidgetComponent
-struct UWidgetInteractionComponent_GetHoveredWidgetComponent_Params
-{
-	class UWidgetComponent*                            ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
-};
-
-// Function UMG.WidgetInteractionComponent.Get2DHitLocation
-struct UWidgetInteractionComponent_Get2DHitLocation_Params
-{
-	struct FVector2D                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function UMG.WidgetLayoutLibrary.SlotAsVerticalBoxSlot
-struct UWidgetLayoutLibrary_SlotAsVerticalBoxSlot_Params
-{
-	class UWidget*                                     Widget;                                                   // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UVerticalBoxSlot*                            ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
-};
-
-// Function UMG.WidgetLayoutLibrary.SlotAsUniformGridSlot
-struct UWidgetLayoutLibrary_SlotAsUniformGridSlot_Params
-{
-	class UWidget*                                     Widget;                                                   // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UUniformGridSlot*                            ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
-};
-
-// Function UMG.WidgetLayoutLibrary.SlotAsOverlaySlot
-struct UWidgetLayoutLibrary_SlotAsOverlaySlot_Params
-{
-	class UWidget*                                     Widget;                                                   // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UOverlaySlot*                                ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
-};
-
-// Function UMG.WidgetLayoutLibrary.SlotAsHorizontalBoxSlot
-struct UWidgetLayoutLibrary_SlotAsHorizontalBoxSlot_Params
-{
-	class UWidget*                                     Widget;                                                   // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UHorizontalBoxSlot*                          ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
-};
-
-// Function UMG.WidgetLayoutLibrary.SlotAsGridSlot
-struct UWidgetLayoutLibrary_SlotAsGridSlot_Params
-{
-	class UWidget*                                     Widget;                                                   // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UGridSlot*                                   ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
-};
-
-// Function UMG.WidgetLayoutLibrary.SlotAsCanvasSlot
-struct UWidgetLayoutLibrary_SlotAsCanvasSlot_Params
-{
-	class UWidget*                                     Widget;                                                   // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UCanvasPanelSlot*                            ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
-};
-
-// Function UMG.WidgetLayoutLibrary.SlotAsBorderSlot
-struct UWidgetLayoutLibrary_SlotAsBorderSlot_Params
-{
-	class UWidget*                                     Widget;                                                   // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UBorderSlot*                                 ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
-};
-
-// Function UMG.WidgetLayoutLibrary.RemoveAllWidgets
-struct UWidgetLayoutLibrary_RemoveAllWidgets_Params
-{
-	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function UMG.WidgetLayoutLibrary.ProjectWorldLocationToWidgetPosition
-struct UWidgetLayoutLibrary_ProjectWorldLocationToWidgetPosition_Params
-{
-	class APlayerController*                           PlayerController;                                         // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     WorldLocation;                                            // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector2D                                   ScreenPosition;                                           // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function UMG.WidgetLayoutLibrary.GetViewportWidgetGeometry
-struct UWidgetLayoutLibrary_GetViewportWidgetGeometry_Params
-{
-	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FGeometry                                   ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
-};
-
-// Function UMG.WidgetLayoutLibrary.GetViewportSize
-struct UWidgetLayoutLibrary_GetViewportSize_Params
-{
-	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector2D                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function UMG.WidgetLayoutLibrary.GetViewportScale
-struct UWidgetLayoutLibrary_GetViewportScale_Params
-{
-	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function UMG.WidgetLayoutLibrary.GetPlayerScreenWidgetGeometry
-struct UWidgetLayoutLibrary_GetPlayerScreenWidgetGeometry_Params
-{
-	class APlayerController*                           PlayerController;                                         // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FGeometry                                   ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
-};
-
-// Function UMG.WidgetLayoutLibrary.GetMousePositionScaledByDPI
-struct UWidgetLayoutLibrary_GetMousePositionScaledByDPI_Params
-{
-	class APlayerController*                           Player;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              LocationX;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	float                                              LocationY;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function UMG.WidgetLayoutLibrary.GetMousePositionOnViewport
-struct UWidgetLayoutLibrary_GetMousePositionOnViewport_Params
-{
-	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector2D                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function UMG.WidgetLayoutLibrary.GetMousePositionOnPlatform
-struct UWidgetLayoutLibrary_GetMousePositionOnPlatform_Params
-{
-	struct FVector2D                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function UMG.WidgetSwitcher.SetActiveWidgetIndex
-struct UWidgetSwitcher_SetActiveWidgetIndex_Params
-{
-	int                                                Index;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function UMG.WidgetSwitcher.SetActiveWidget
-struct UWidgetSwitcher_SetActiveWidget_Params
-{
-	class UWidget*                                     Widget;                                                   // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-};
-
-// Function UMG.WidgetSwitcher.GetWidgetAtIndex
-struct UWidgetSwitcher_GetWidgetAtIndex_Params
-{
-	int                                                Index;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-	class UWidget*                                     ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
-};
-
-// Function UMG.WidgetSwitcher.GetNumWidgets
-struct UWidgetSwitcher_GetNumWidgets_Params
-{
-	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function UMG.WidgetSwitcher.GetActiveWidgetIndex
-struct UWidgetSwitcher_GetActiveWidgetIndex_Params
-{
-	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function UMG.WidgetSwitcher.GetActiveWidget
-struct UWidgetSwitcher_GetActiveWidget_Params
-{
-	class UWidget*                                     ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
-};
-
-// Function UMG.WidgetSwitcherSlot.SetVerticalAlignment
-struct UWidgetSwitcherSlot_SetVerticalAlignment_Params
-{
-	TEnumAsByte<EVerticalAlignment>                    InVerticalAlignment;                                      // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function UMG.WidgetSwitcherSlot.SetPadding
-struct UWidgetSwitcherSlot_SetPadding_Params
-{
-	struct FMargin                                     InPadding;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function UMG.WidgetSwitcherSlot.SetHorizontalAlignment
-struct UWidgetSwitcherSlot_SetHorizontalAlignment_Params
-{
-	TEnumAsByte<EHorizontalAlignment>                  InHorizontalAlignment;                                    // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function UMG.WindowTitleBarArea.SetVerticalAlignment
-struct UWindowTitleBarArea_SetVerticalAlignment_Params
-{
-	TEnumAsByte<EVerticalAlignment>                    InVerticalAlignment;                                      // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function UMG.WindowTitleBarArea.SetPadding
-struct UWindowTitleBarArea_SetPadding_Params
-{
-	struct FMargin                                     InPadding;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function UMG.WindowTitleBarArea.SetHorizontalAlignment
-struct UWindowTitleBarArea_SetHorizontalAlignment_Params
-{
-	TEnumAsByte<EHorizontalAlignment>                  InHorizontalAlignment;                                    // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function UMG.WindowTitleBarAreaSlot.SetVerticalAlignment
-struct UWindowTitleBarAreaSlot_SetVerticalAlignment_Params
-{
-	TEnumAsByte<EVerticalAlignment>                    InVerticalAlignment;                                      // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function UMG.WindowTitleBarAreaSlot.SetPadding
-struct UWindowTitleBarAreaSlot_SetPadding_Params
-{
-	struct FMargin                                     InPadding;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function UMG.WindowTitleBarAreaSlot.SetHorizontalAlignment
-struct UWindowTitleBarAreaSlot_SetHorizontalAlignment_Params
-{
-	TEnumAsByte<EHorizontalAlignment>                  InHorizontalAlignment;                                    // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function UMG.WrapBox.SetInnerSlotPadding
-struct UWrapBox_SetInnerSlotPadding_Params
-{
-	struct FVector2D                                   InPadding;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function UMG.WrapBox.AddChildWrapBox
-struct UWrapBox_AddChildWrapBox_Params
-{
-	class UWidget*                                     Content;                                                  // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UWrapBoxSlot*                                ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
-};
-
-// Function UMG.WrapBoxSlot.SetVerticalAlignment
-struct UWrapBoxSlot_SetVerticalAlignment_Params
-{
-	TEnumAsByte<EVerticalAlignment>                    InVerticalAlignment;                                      // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function UMG.WrapBoxSlot.SetPadding
-struct UWrapBoxSlot_SetPadding_Params
-{
-	struct FMargin                                     InPadding;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function UMG.WrapBoxSlot.SetHorizontalAlignment
-struct UWrapBoxSlot_SetHorizontalAlignment_Params
-{
-	TEnumAsByte<EHorizontalAlignment>                  InHorizontalAlignment;                                    // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function UMG.WrapBoxSlot.SetFillSpanWhenLessThan
-struct UWrapBoxSlot_SetFillSpanWhenLessThan_Params
-{
-	float                                              InFillSpanWhenLessThan;                                   // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function UMG.WrapBoxSlot.SetFillEmptySpace
-struct UWrapBoxSlot_SetFillEmptySpace_Params
-{
-	bool                                               InbFillEmptySpace;                                        // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

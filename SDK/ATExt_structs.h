@@ -675,28 +675,6 @@ struct FCommunitySkillCookingList : public FTableRowBase
 	struct FCommunitySkillCooking                      SkillTbl[0xB];                                            // 0x0008(0x0020) (Edit)
 };
 
-// ScriptStruct ATExt.CommunityBoardLinkInfo
-// 0x00E0 (0x00E8 - 0x0008)
-struct FCommunityBoardLinkInfo : public FTableRowBase
-{
-	int                                                ReleaseLevel;                                             // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                Link1;                                                    // 0x000C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                Link2;                                                    // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                Link3;                                                    // 0x0014(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                Link4;                                                    // 0x0018(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                Link5;                                                    // 0x001C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                Link6;                                                    // 0x0020(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                Link7;                                                    // 0x0024(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                Link8;                                                    // 0x0028(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                Link9;                                                    // 0x002C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                Link10;                                                   // 0x0030(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FVector2D                                   PanelOffset;                                              // 0x0034(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FVector2D                                   PanelScale;                                               // 0x003C(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                ZOrder;                                                   // 0x0044(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FVector2D                                   LineSOffset[0xA];                                         // 0x0048(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FVector2D                                   LineEOffset[0xA];                                         // 0x0098(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-};
-
 // ScriptStruct ATExt.CommunityBoardLayout
 // 0x0100 (0x0108 - 0x0008)
 struct FCommunityBoardLayout : public FTableRowBase
@@ -765,6 +743,28 @@ struct FCommunityBoardLayout : public FTableRowBase
 	int                                                Col62;                                                    // 0x00FC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	int                                                Col63;                                                    // 0x0100(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	int                                                Col64;                                                    // 0x0104(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct ATExt.CommunityBoardLinkInfo
+// 0x00E0 (0x00E8 - 0x0008)
+struct FCommunityBoardLinkInfo : public FTableRowBase
+{
+	int                                                ReleaseLevel;                                             // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                Link1;                                                    // 0x000C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                Link2;                                                    // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                Link3;                                                    // 0x0014(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                Link4;                                                    // 0x0018(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                Link5;                                                    // 0x001C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                Link6;                                                    // 0x0020(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                Link7;                                                    // 0x0024(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                Link8;                                                    // 0x0028(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                Link9;                                                    // 0x002C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                Link10;                                                   // 0x0030(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector2D                                   PanelOffset;                                              // 0x0034(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector2D                                   PanelScale;                                               // 0x003C(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                ZOrder;                                                   // 0x0044(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector2D                                   LineSOffset[0xA];                                         // 0x0048(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector2D                                   LineEOffset[0xA];                                         // 0x0098(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct ATExt.LinkBonusParam
@@ -1285,6 +1285,13 @@ struct FATSaveGameFishing
 	struct FATFishingBaitSaveData                      BaitData[0xF];                                            // 0x0000(0x0018)
 };
 
+// ScriptStruct ATExt.ATSaveGameImportantLog
+// 0x1F40
+struct FATSaveGameImportantLog
+{
+	unsigned char                                      UnknownData00[0x1F40];                                    // 0x0000(0x1F40) MISSED OFFSET
+};
+
 // ScriptStruct ATExt.DragonballItem
 // 0x0020
 struct FDragonballItem
@@ -1340,16 +1347,6 @@ struct FATSaveGameMapIcon
 	int                                                FishingData[0x100];                                       // 0x1000(0x0004) (ZeroConstructor, IsPlainOldData)
 };
 
-// ScriptStruct ATExt.ATSaveGameMarker
-// 0x0010
-struct FATSaveGameMarker
-{
-	bool                                               bExists;                                                  // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
-	EAreaIndex                                         AreaIndex;                                                // 0x0001(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x2];                                       // 0x0002(0x0002) MISSED OFFSET
-	struct FVector                                     PlayerMarkerPos3D;                                        // 0x0004(0x000C) (ZeroConstructor, IsPlainOldData)
-};
-
 // ScriptStruct ATExt.ATSaveGameMinigame
 // 0x01B8
 struct FATSaveGameMinigame
@@ -1359,6 +1356,16 @@ struct FATSaveGameMinigame
 	struct FMiniGameQuizSaveInfo                       MiniGameQuizInfo;                                         // 0x0110(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0111(0x0007) MISSED OFFSET
 	struct FMiniGameFishingSaveInfo                    MiniGameFishingSaveInfo;                                  // 0x0118(0x00A0)
+};
+
+// ScriptStruct ATExt.ATSaveGameMarker
+// 0x0010
+struct FATSaveGameMarker
+{
+	bool                                               bExists;                                                  // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
+	EAreaIndex                                         AreaIndex;                                                // 0x0001(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x2];                                       // 0x0002(0x0002) MISSED OFFSET
+	struct FVector                                     PlayerMarkerPos3D;                                        // 0x0004(0x000C) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct ATExt.ATSaveGameOnline
@@ -1744,13 +1751,6 @@ struct FSubQuestCameraTable : public FTableRowBase
 	struct FSubQuestCameraOffset                       StartOffset;                                              // 0x008C(0x0028) (Edit)
 	struct FSubQuestCameraOffset                       CompleteOffset;                                           // 0x00B4(0x0028) (Edit)
 	float                                              FixViewFrame;                                             // 0x00DC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct ATExt.ATSaveGameImportantLog
-// 0x1F40
-struct FATSaveGameImportantLog
-{
-	unsigned char                                      UnknownData00[0x1F40];                                    // 0x0000(0x1F40) MISSED OFFSET
 };
 
 }

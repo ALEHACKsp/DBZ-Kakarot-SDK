@@ -222,6 +222,21 @@ public:
 };
 
 
+// Class Foliage.InteractiveFoliageComponent
+// 0x0000 (0x0600 - 0x0600)
+class UInteractiveFoliageComponent : public UStaticMeshComponent
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Foliage.InteractiveFoliageComponent");
+		return ptr;
+	}
+
+};
+
+
 // Class Foliage.ProceduralFoliageBlockingVolume
 // 0x0008 (0x0378 - 0x0370)
 class AProceduralFoliageBlockingVolume : public AVolume
@@ -312,21 +327,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Foliage.ProceduralFoliageVolume");
-		return ptr;
-	}
-
-};
-
-
-// Class Foliage.InteractiveFoliageComponent
-// 0x0000 (0x0600 - 0x0600)
-class UInteractiveFoliageComponent : public UStaticMeshComponent
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Foliage.InteractiveFoliageComponent");
 		return ptr;
 	}
 

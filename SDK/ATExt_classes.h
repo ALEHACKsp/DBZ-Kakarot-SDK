@@ -583,6 +583,23 @@ public:
 };
 
 
+// Class ATExt.ATBossBattle0801RootManager
+// 0x0008 (0x0398 - 0x0390)
+class AATBossBattle0801RootManager : public AATEventBattleRootManagerBase
+{
+public:
+	float                                              HeatupValue;                                              // 0x0390(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0394(0x0004) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class ATExt.ATBossBattle0801RootManager");
+		return ptr;
+	}
+
+};
+
+
 // Class ATExt.ATBossBattle0802MainPhase
 // 0x0060 (0x0090 - 0x0030)
 class UATBossBattle0802MainPhase : public UATEventBattlePhaseBase
@@ -1081,6 +1098,21 @@ public:
 };
 
 
+// Class ATExt.ATCharacterCpl002C
+// 0x0000 (0x0FA0 - 0x0FA0)
+class AATCharacterCpl002C : public AATCharacterCpl002Base
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class ATExt.ATCharacterCpl002C");
+		return ptr;
+	}
+
+};
+
+
 // Class ATExt.ATCharacterCpl002D
 // 0x0000 (0x0FA0 - 0x0FA0)
 class AATCharacterCpl002D : public AATCharacterCpl002Base
@@ -1141,15 +1173,15 @@ public:
 };
 
 
-// Class ATExt.ATCharacterCpl002C
+// Class ATExt.ATCharacterCpl003B
 // 0x0000 (0x0FA0 - 0x0FA0)
-class AATCharacterCpl002C : public AATCharacterCpl002Base
+class AATCharacterCpl003B : public AATCharacterCpl003Base
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ATExt.ATCharacterCpl002C");
+		static auto ptr = UObject::FindClass("Class ATExt.ATCharacterCpl003B");
 		return ptr;
 	}
 
@@ -2079,15 +2111,15 @@ public:
 };
 
 
-// Class ATExt.ATCharacterCpl003B
+// Class ATExt.ATCharacterCpl043
 // 0x0000 (0x0FA0 - 0x0FA0)
-class AATCharacterCpl003B : public AATCharacterCpl003Base
+class AATCharacterCpl043 : public AAT_CharacterPlayableBase
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ATExt.ATCharacterCpl003B");
+		static auto ptr = UObject::FindClass("Class ATExt.ATCharacterCpl043");
 		return ptr;
 	}
 
@@ -2470,15 +2502,15 @@ public:
 };
 
 
-// Class ATExt.ATCharacterCpl043
+// Class ATExt.ATCharacterCpl065c01
 // 0x0000 (0x0FA0 - 0x0FA0)
-class AATCharacterCpl043 : public AAT_CharacterPlayableBase
+class AATCharacterCpl065c01 : public AATCharacterCpl065Base
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ATExt.ATCharacterCpl043");
+		static auto ptr = UObject::FindClass("Class ATExt.ATCharacterCpl065c01");
 		return ptr;
 	}
 
@@ -2500,15 +2532,15 @@ public:
 };
 
 
-// Class ATExt.ATCharacterCpl065c01
+// Class ATExt.ATCharacterCpl065c03
 // 0x0000 (0x0FA0 - 0x0FA0)
-class AATCharacterCpl065c01 : public AATCharacterCpl065Base
+class AATCharacterCpl065c03 : public AATCharacterCpl065Base
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ATExt.ATCharacterCpl065c01");
+		static auto ptr = UObject::FindClass("Class ATExt.ATCharacterCpl065c03");
 		return ptr;
 	}
 
@@ -4139,21 +4171,6 @@ public:
 };
 
 
-// Class ATExt.ATCharacterCpl065c03
-// 0x0000 (0x0FA0 - 0x0FA0)
-class AATCharacterCpl065c03 : public AATCharacterCpl065Base
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class ATExt.ATCharacterCpl065c03");
-		return ptr;
-	}
-
-};
-
-
 // Class ATExt.ATPushSolverShapeCapsule
 // 0x0000 (0x05B0 - 0x05B0)
 class UATPushSolverShapeCapsule : public UCFPushSolverShapeCapsule
@@ -5313,6 +5330,21 @@ public:
 };
 
 
+// Class ATExt.ATSceneFreeArea22
+// 0x0000 (0x0048 - 0x0048)
+class UATSceneFreeArea22 : public UATSceneFreeRoot
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class ATExt.ATSceneFreeArea22");
+		return ptr;
+	}
+
+};
+
+
 // Class ATExt.ATSceneFreeArea23
 // 0x0000 (0x0048 - 0x0048)
 class UATSceneFreeArea23 : public UATSceneFreeRoot
@@ -5328,15 +5360,15 @@ public:
 };
 
 
-// Class ATExt.ATSceneFreeArea22
+// Class ATExt.ATSceneFreeArea24
 // 0x0000 (0x0048 - 0x0048)
-class UATSceneFreeArea22 : public UATSceneFreeRoot
+class UATSceneFreeArea24 : public UATSceneFreeRoot
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ATExt.ATSceneFreeArea22");
+		static auto ptr = UObject::FindClass("Class ATExt.ATSceneFreeArea24");
 		return ptr;
 	}
 
@@ -5542,15 +5574,15 @@ public:
 };
 
 
-// Class ATExt.ATSceneFreeArea24
+// Class ATExt.ATSceneIngameDemo
 // 0x0000 (0x0048 - 0x0048)
-class UATSceneFreeArea24 : public UATSceneFreeRoot
+class UATSceneIngameDemo : public UATSceneDemoBase
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ATExt.ATSceneFreeArea24");
+		static auto ptr = UObject::FindClass("Class ATExt.ATSceneIngameDemo");
 		return ptr;
 	}
 
@@ -5987,6 +6019,23 @@ public:
 };
 
 
+// Class ATExt.CameraActorIngameDemo
+// 0x0010 (0x09B0 - 0x09A0)
+class ACameraActorIngameDemo : public ACameraActor
+{
+public:
+	class UCameraAnimInst*                             CameraAnimInst;                                           // 0x09A0(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x09A8(0x0008) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class ATExt.CameraActorIngameDemo");
+		return ptr;
+	}
+
+};
+
+
 // Class ATExt.CameraAttachActor
 // 0x0008 (0x0340 - 0x0338)
 class ACameraAttachActor : public AActor
@@ -6222,17 +6271,16 @@ public:
 };
 
 
-// Class ATExt.CameraActorIngameDemo
-// 0x0010 (0x09B0 - 0x09A0)
-class ACameraActorIngameDemo : public ACameraActor
+// Class ATExt.ViewActorComboCut
+// 0x0008 (0x03F0 - 0x03E8)
+class AViewActorComboCut : public AViewActorShortCombo
 {
 public:
-	class UCameraAnimInst*                             CameraAnimInst;                                           // 0x09A0(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x09A8(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x03E8(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ATExt.CameraActorIngameDemo");
+		static auto ptr = UObject::FindClass("Class ATExt.ViewActorComboCut");
 		return ptr;
 	}
 
@@ -6883,22 +6931,6 @@ public:
 };
 
 
-// Class ATExt.ViewActorComboCut
-// 0x0008 (0x03F0 - 0x03E8)
-class AViewActorComboCut : public AViewActorShortCombo
-{
-public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x03E8(0x0008) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class ATExt.ViewActorComboCut");
-		return ptr;
-	}
-
-};
-
-
 // Class ATExt.ViewActorWindRoad
 // 0x0048 (0x0420 - 0x03D8)
 class AViewActorWindRoad : public AViewActor
@@ -6911,38 +6943,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class ATExt.ViewActorWindRoad");
-		return ptr;
-	}
-
-};
-
-
-// Class ATExt.ATSceneIngameDemo
-// 0x0000 (0x0048 - 0x0048)
-class UATSceneIngameDemo : public UATSceneDemoBase
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class ATExt.ATSceneIngameDemo");
-		return ptr;
-	}
-
-};
-
-
-// Class ATExt.ATBossBattle0801RootManager
-// 0x0008 (0x0398 - 0x0390)
-class AATBossBattle0801RootManager : public AATEventBattleRootManagerBase
-{
-public:
-	float                                              HeatupValue;                                              // 0x0390(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0394(0x0004) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class ATExt.ATBossBattle0801RootManager");
 		return ptr;
 	}
 

@@ -440,22 +440,6 @@ struct UAtomDeviceWatcher_GetDeviceChannelCount_Params
 	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function CriWareRuntime.AtomProfileData.CriWareAdx2ProfileDataUpdate
-struct UAtomProfileData_CriWareAdx2ProfileDataUpdate_Params
-{
-	class UObject*                                     WorldContextObject;                                       // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-	TArray<struct FAtomProfileItem>                    ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
-};
-
-// Function CriWareRuntime.AtomProfileData.CriWareAdx2ProfileDataSort
-struct UAtomProfileData_CriWareAdx2ProfileDataSort_Params
-{
-	TArray<struct FAtomProfileItem>                    original_item;                                            // (Parm, ZeroConstructor)
-	EAtomProfileSortType                               sort_type;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	EAtomSortOrderType                                 order_type;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	TArray<struct FAtomProfileItem>                    sorted_item;                                              // (Parm, OutParm, ZeroConstructor)
-};
-
 // Function CriWareRuntime.AtomSpectrumAnalyzer.GetLevelsDB
 struct UAtomSpectrumAnalyzer_GetLevelsDB_Params
 {
@@ -1120,6 +1104,22 @@ struct USoundAtomCueSheet_ApplyDspBusSnapshot_Params
 {
 	struct FString                                     SnapshotName;                                             // (Parm, ZeroConstructor)
 	int                                                Milliseconds;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function CriWareRuntime.AtomProfileData.CriWareAdx2ProfileDataUpdate
+struct UAtomProfileData_CriWareAdx2ProfileDataUpdate_Params
+{
+	class UObject*                                     WorldContextObject;                                       // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	TArray<struct FAtomProfileItem>                    ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
+// Function CriWareRuntime.AtomProfileData.CriWareAdx2ProfileDataSort
+struct UAtomProfileData_CriWareAdx2ProfileDataSort_Params
+{
+	TArray<struct FAtomProfileItem>                    original_item;                                            // (Parm, ZeroConstructor)
+	EAtomProfileSortType                               sort_type;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	EAtomSortOrderType                                 order_type;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	TArray<struct FAtomProfileItem>                    sorted_item;                                              // (Parm, OutParm, ZeroConstructor)
 };
 
 }

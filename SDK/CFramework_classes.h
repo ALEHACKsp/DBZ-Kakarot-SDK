@@ -356,22 +356,6 @@ public:
 };
 
 
-// Class CFramework.CFScene
-// 0x0010 (0x0040 - 0x0030)
-class UCFScene : public UCFObject
-{
-public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0030(0x0010) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class CFramework.CFScene");
-		return ptr;
-	}
-
-};
-
-
 // Class CFramework.CFSceneChangeParamBase
 // 0x0010 (0x0040 - 0x0030)
 class UCFSceneChangeParamBase : public UCFObject
@@ -382,6 +366,22 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class CFramework.CFSceneChangeParamBase");
+		return ptr;
+	}
+
+};
+
+
+// Class CFramework.CFScene
+// 0x0010 (0x0040 - 0x0030)
+class UCFScene : public UCFObject
+{
+public:
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0030(0x0010) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class CFramework.CFScene");
 		return ptr;
 	}
 
@@ -435,6 +435,21 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class CFramework.CFSingleton");
+		return ptr;
+	}
+
+};
+
+
+// Class CFramework.CFActivateInterface
+// 0x0000 (0x0028 - 0x0028)
+class UCFActivateInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class CFramework.CFActivateInterface");
 		return ptr;
 	}
 
@@ -702,23 +717,6 @@ public:
 };
 
 
-// Class CFramework.CFDebugMenuContentButton
-// 0x0000 (0x0240 - 0x0240)
-class UCFDebugMenuContentButton : public UCFDebugMenuContent
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class CFramework.CFDebugMenuContentButton");
-		return ptr;
-	}
-
-
-	class UButton* GetButtonBox();
-};
-
-
 // Class CFramework.CFDebugMenuContentClass
 // 0x0010 (0x0250 - 0x0240)
 class UCFDebugMenuContentClass : public UCFDebugMenuContent
@@ -817,6 +815,23 @@ public:
 
 	void Set(const struct FString& selected, TEnumAsByte<ESelectInfo> Type);
 	void Build(TArray<struct FString>* Options, struct FString* current);
+};
+
+
+// Class CFramework.CFDebugMenuContentButton
+// 0x0000 (0x0240 - 0x0240)
+class UCFDebugMenuContentButton : public UCFDebugMenuContent
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class CFramework.CFDebugMenuContentButton");
+		return ptr;
+	}
+
+
+	class UButton* GetButtonBox();
 };
 
 
@@ -1029,15 +1044,15 @@ public:
 };
 
 
-// Class CFramework.DMBoolCharacterDispInfo
+// Class CFramework.CFDMLogSwitchEngine
 // 0x0000 (0x0058 - 0x0058)
-class UDMBoolCharacterDispInfo : public UCFDebugMenuEventHandlerBool
+class UCFDMLogSwitchEngine : public UCFDebugMenuEventHandlerBool
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class CFramework.DMBoolCharacterDispInfo");
+		static auto ptr = UObject::FindClass("Class CFramework.CFDMLogSwitchEngine");
 		return ptr;
 	}
 
@@ -1122,27 +1137,18 @@ public:
 };
 
 
-// Class CFramework.DMDispLoadStatus
-// 0x0030 (0x0088 - 0x0058)
-class UDMDispLoadStatus : public UCFDebugMenuEventHandlerBool
+// Class CFramework.DMBoolCharacterDispInfo
+// 0x0000 (0x0058 - 0x0058)
+class UDMBoolCharacterDispInfo : public UCFDebugMenuEventHandlerBool
 {
 public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0058(0x0020) MISSED OFFSET
-	class UCFInputComponent*                           Input;                                                    // 0x0078(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0080(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class CFramework.DMDispLoadStatus");
+		static auto ptr = UObject::FindClass("Class CFramework.DMBoolCharacterDispInfo");
 		return ptr;
 	}
 
-
-	void Tick(float DeltaTime);
-	void OnPressedRight();
-	void OnPressedLeft();
-	void OnDetachInput(class UObject* WorldContext);
-	void OnAttachInput(class UObject* WorldContext);
 };
 
 
@@ -1653,6 +1659,30 @@ public:
 		return ptr;
 	}
 
+};
+
+
+// Class CFramework.DMDispLoadStatus
+// 0x0030 (0x0088 - 0x0058)
+class UDMDispLoadStatus : public UCFDebugMenuEventHandlerBool
+{
+public:
+	unsigned char                                      UnknownData00[0x20];                                      // 0x0058(0x0020) MISSED OFFSET
+	class UCFInputComponent*                           Input;                                                    // 0x0078(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x8];                                       // 0x0080(0x0008) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class CFramework.DMDispLoadStatus");
+		return ptr;
+	}
+
+
+	void Tick(float DeltaTime);
+	void OnPressedRight();
+	void OnPressedLeft();
+	void OnDetachInput(class UObject* WorldContext);
+	void OnAttachInput(class UObject* WorldContext);
 };
 
 
@@ -2182,36 +2212,6 @@ public:
 	void SetText(const struct FText& InText);
 	struct FText GetText();
 	void AdaptTextSetting();
-};
-
-
-// Class CFramework.CFDMLogSwitchEngine
-// 0x0000 (0x0058 - 0x0058)
-class UCFDMLogSwitchEngine : public UCFDebugMenuEventHandlerBool
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class CFramework.CFDMLogSwitchEngine");
-		return ptr;
-	}
-
-};
-
-
-// Class CFramework.CFActivateInterface
-// 0x0000 (0x0028 - 0x0028)
-class UCFActivateInterface : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class CFramework.CFActivateInterface");
-		return ptr;
-	}
-
 };
 
 

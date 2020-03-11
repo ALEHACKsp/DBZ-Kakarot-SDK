@@ -143,22 +143,6 @@ public:
 };
 
 
-// Class GameplayTags.EditableGameplayTagQueryExpression_AnyExprMatch
-// 0x0010 (0x0038 - 0x0028)
-class UEditableGameplayTagQueryExpression_AnyExprMatch : public UEditableGameplayTagQueryExpression
-{
-public:
-	TArray<class UEditableGameplayTagQueryExpression*> Expressions;                                              // 0x0028(0x0010) (Edit, ExportObject, ZeroConstructor)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class GameplayTags.EditableGameplayTagQueryExpression_AnyExprMatch");
-		return ptr;
-	}
-
-};
-
-
 // Class GameplayTags.EditableGameplayTagQueryExpression_NoTagsMatch
 // 0x0020 (0x0048 - 0x0028)
 class UEditableGameplayTagQueryExpression_NoTagsMatch : public UEditableGameplayTagQueryExpression
@@ -175,6 +159,22 @@ public:
 };
 
 
+// Class GameplayTags.EditableGameplayTagQueryExpression_AnyExprMatch
+// 0x0010 (0x0038 - 0x0028)
+class UEditableGameplayTagQueryExpression_AnyExprMatch : public UEditableGameplayTagQueryExpression
+{
+public:
+	TArray<class UEditableGameplayTagQueryExpression*> Expressions;                                              // 0x0028(0x0010) (Edit, ExportObject, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayTags.EditableGameplayTagQueryExpression_AnyExprMatch");
+		return ptr;
+	}
+
+};
+
+
 // Class GameplayTags.EditableGameplayTagQueryExpression_AllExprMatch
 // 0x0010 (0x0038 - 0x0028)
 class UEditableGameplayTagQueryExpression_AllExprMatch : public UEditableGameplayTagQueryExpression
@@ -185,6 +185,22 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class GameplayTags.EditableGameplayTagQueryExpression_AllExprMatch");
+		return ptr;
+	}
+
+};
+
+
+// Class GameplayTags.EditableGameplayTagQueryExpression_NoExprMatch
+// 0x0010 (0x0038 - 0x0028)
+class UEditableGameplayTagQueryExpression_NoExprMatch : public UEditableGameplayTagQueryExpression
+{
+public:
+	TArray<class UEditableGameplayTagQueryExpression*> Expressions;                                              // 0x0028(0x0010) (Edit, ExportObject, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayTags.EditableGameplayTagQueryExpression_NoExprMatch");
 		return ptr;
 	}
 
@@ -283,22 +299,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class GameplayTags.GameplayTagsDeveloperSettings");
-		return ptr;
-	}
-
-};
-
-
-// Class GameplayTags.EditableGameplayTagQueryExpression_NoExprMatch
-// 0x0010 (0x0038 - 0x0028)
-class UEditableGameplayTagQueryExpression_NoExprMatch : public UEditableGameplayTagQueryExpression
-{
-public:
-	TArray<class UEditableGameplayTagQueryExpression*> Expressions;                                              // 0x0028(0x0010) (Edit, ExportObject, ZeroConstructor)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class GameplayTags.EditableGameplayTagQueryExpression_NoExprMatch");
 		return ptr;
 	}
 

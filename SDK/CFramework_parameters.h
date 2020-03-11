@@ -339,12 +339,6 @@ struct UCFDebugMenuContentText_GetTextBox_Params
 	class UEditableTextBox*                            ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 };
 
-// Function CFramework.CFDebugMenuContentButton.GetButtonBox
-struct UCFDebugMenuContentButton_GetButtonBox_Params
-{
-	class UButton*                                     ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
-};
-
 // Function CFramework.CFDebugMenuContentClass.OnSetClass
 struct UCFDebugMenuContentClass_OnSetClass_Params
 {
@@ -401,6 +395,12 @@ struct UCFDebugMenuEventHandlerCombo_Build_Params
 	struct FString                                     current;                                                  // (Parm, OutParm, ZeroConstructor)
 };
 
+// Function CFramework.CFDebugMenuContentButton.GetButtonBox
+struct UCFDebugMenuContentButton_GetButtonBox_Params
+{
+	class UButton*                                     ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
 // Function CFramework.CFDebugMenuEventHandlerExample.SetFExample
 struct UCFDebugMenuEventHandlerExample_SetFExample_Params
 {
@@ -417,34 +417,6 @@ struct UCFDebugMenuEventHandlerExample_GetFParam_Params
 struct UCFDebugMenuEventHandlerExample_GetFExample_Params
 {
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function CFramework.DMDispLoadStatus.Tick
-struct UDMDispLoadStatus_Tick_Params
-{
-	float                                              DeltaTime;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function CFramework.DMDispLoadStatus.OnPressedRight
-struct UDMDispLoadStatus_OnPressedRight_Params
-{
-};
-
-// Function CFramework.DMDispLoadStatus.OnPressedLeft
-struct UDMDispLoadStatus_OnPressedLeft_Params
-{
-};
-
-// Function CFramework.DMDispLoadStatus.OnDetachInput
-struct UDMDispLoadStatus_OnDetachInput_Params
-{
-	class UObject*                                     WorldContext;                                             // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function CFramework.DMDispLoadStatus.OnAttachInput
-struct UDMDispLoadStatus_OnAttachInput_Params
-{
-	class UObject*                                     WorldContext;                                             // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function CFramework.CFDebugXmlSelector.OnPressedUp
@@ -664,6 +636,34 @@ struct UCFParticleManager_DeactiveParticleComponent_Params
 {
 	int                                                InUID;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function CFramework.DMDispLoadStatus.Tick
+struct UDMDispLoadStatus_Tick_Params
+{
+	float                                              DeltaTime;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function CFramework.DMDispLoadStatus.OnPressedRight
+struct UDMDispLoadStatus_OnPressedRight_Params
+{
+};
+
+// Function CFramework.DMDispLoadStatus.OnPressedLeft
+struct UDMDispLoadStatus_OnPressedLeft_Params
+{
+};
+
+// Function CFramework.DMDispLoadStatus.OnDetachInput
+struct UDMDispLoadStatus_OnDetachInput_Params
+{
+	class UObject*                                     WorldContext;                                             // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function CFramework.DMDispLoadStatus.OnAttachInput
+struct UDMDispLoadStatus_OnAttachInput_Params
+{
+	class UObject*                                     WorldContext;                                             // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function CFramework.CFRegistFontAtlasText.SetWriteFontAtlas

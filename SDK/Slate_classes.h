@@ -28,6 +28,22 @@ public:
 };
 
 
+// Class Slate.CheckBoxWidgetStyle
+// 0x0580 (0x05B0 - 0x0030)
+class UCheckBoxWidgetStyle : public USlateWidgetStyleContainerBase
+{
+public:
+	struct FCheckBoxStyle                              CheckBoxStyle;                                            // 0x0030(0x0580) (Edit)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Slate.CheckBoxWidgetStyle");
+		return ptr;
+	}
+
+};
+
+
 // Class Slate.ComboBoxWidgetStyle
 // 0x03D8 (0x0408 - 0x0030)
 class UComboBoxWidgetStyle : public USlateWidgetStyleContainerBase
@@ -183,22 +199,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Slate.TextBlockWidgetStyle");
-		return ptr;
-	}
-
-};
-
-
-// Class Slate.CheckBoxWidgetStyle
-// 0x0580 (0x05B0 - 0x0030)
-class UCheckBoxWidgetStyle : public USlateWidgetStyleContainerBase
-{
-public:
-	struct FCheckBoxStyle                              CheckBoxStyle;                                            // 0x0030(0x0580) (Edit)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Slate.CheckBoxWidgetStyle");
 		return ptr;
 	}
 

@@ -1168,27 +1168,6 @@ class UEditableTextBox* UCFDebugMenuContentText::GetTextBox()
 }
 
 
-// Function CFramework.CFDebugMenuContentButton.GetButtonBox
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class UButton*                 ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
-
-class UButton* UCFDebugMenuContentButton::GetButtonBox()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function CFramework.CFDebugMenuContentButton.GetButtonBox");
-
-	UCFDebugMenuContentButton_GetButtonBox_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
 // Function CFramework.CFDebugMenuContentClass.OnSetClass
 // (Final, Native, Protected)
 // Parameters:
@@ -1389,6 +1368,27 @@ void UCFDebugMenuEventHandlerCombo::Build(TArray<struct FString>* Options, struc
 }
 
 
+// Function CFramework.CFDebugMenuContentButton.GetButtonBox
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class UButton*                 ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+
+class UButton* UCFDebugMenuContentButton::GetButtonBox()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function CFramework.CFDebugMenuContentButton.GetButtonBox");
+
+	UCFDebugMenuContentButton_GetButtonBox_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function CFramework.CFDebugMenuEventHandlerExample.SetFExample
 // (Final, Native, Private)
 // Parameters:
@@ -1452,105 +1452,6 @@ float UCFDebugMenuEventHandlerExample::GetFExample()
 	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
-}
-
-
-// Function CFramework.DMDispLoadStatus.Tick
-// (Final, Native, Private)
-// Parameters:
-// float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
-
-void UDMDispLoadStatus::Tick(float DeltaTime)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function CFramework.DMDispLoadStatus.Tick");
-
-	UDMDispLoadStatus_Tick_Params params;
-	params.DeltaTime = DeltaTime;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function CFramework.DMDispLoadStatus.OnPressedRight
-// (Final, Native, Private)
-
-void UDMDispLoadStatus::OnPressedRight()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function CFramework.DMDispLoadStatus.OnPressedRight");
-
-	UDMDispLoadStatus_OnPressedRight_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function CFramework.DMDispLoadStatus.OnPressedLeft
-// (Final, Native, Private)
-
-void UDMDispLoadStatus::OnPressedLeft()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function CFramework.DMDispLoadStatus.OnPressedLeft");
-
-	UDMDispLoadStatus_OnPressedLeft_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function CFramework.DMDispLoadStatus.OnDetachInput
-// (Final, Native, Private)
-// Parameters:
-// class UObject*                 WorldContext                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-
-void UDMDispLoadStatus::OnDetachInput(class UObject* WorldContext)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function CFramework.DMDispLoadStatus.OnDetachInput");
-
-	UDMDispLoadStatus_OnDetachInput_Params params;
-	params.WorldContext = WorldContext;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function CFramework.DMDispLoadStatus.OnAttachInput
-// (Final, Native, Private)
-// Parameters:
-// class UObject*                 WorldContext                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-
-void UDMDispLoadStatus::OnAttachInput(class UObject* WorldContext)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function CFramework.DMDispLoadStatus.OnAttachInput");
-
-	UDMDispLoadStatus_OnAttachInput_Params params;
-	params.WorldContext = WorldContext;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -2312,6 +2213,105 @@ bool UCFParticleManager::DeactiveParticleComponent(int InUID)
 	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
+}
+
+
+// Function CFramework.DMDispLoadStatus.Tick
+// (Final, Native, Private)
+// Parameters:
+// float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void UDMDispLoadStatus::Tick(float DeltaTime)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function CFramework.DMDispLoadStatus.Tick");
+
+	UDMDispLoadStatus_Tick_Params params;
+	params.DeltaTime = DeltaTime;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function CFramework.DMDispLoadStatus.OnPressedRight
+// (Final, Native, Private)
+
+void UDMDispLoadStatus::OnPressedRight()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function CFramework.DMDispLoadStatus.OnPressedRight");
+
+	UDMDispLoadStatus_OnPressedRight_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function CFramework.DMDispLoadStatus.OnPressedLeft
+// (Final, Native, Private)
+
+void UDMDispLoadStatus::OnPressedLeft()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function CFramework.DMDispLoadStatus.OnPressedLeft");
+
+	UDMDispLoadStatus_OnPressedLeft_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function CFramework.DMDispLoadStatus.OnDetachInput
+// (Final, Native, Private)
+// Parameters:
+// class UObject*                 WorldContext                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UDMDispLoadStatus::OnDetachInput(class UObject* WorldContext)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function CFramework.DMDispLoadStatus.OnDetachInput");
+
+	UDMDispLoadStatus_OnDetachInput_Params params;
+	params.WorldContext = WorldContext;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function CFramework.DMDispLoadStatus.OnAttachInput
+// (Final, Native, Private)
+// Parameters:
+// class UObject*                 WorldContext                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UDMDispLoadStatus::OnAttachInput(class UObject* WorldContext)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function CFramework.DMDispLoadStatus.OnAttachInput");
+
+	UDMDispLoadStatus_OnAttachInput_Params params;
+	params.WorldContext = WorldContext;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
 }
 
 

@@ -1473,59 +1473,6 @@ int UAtomDeviceWatcher::GetDeviceChannelCount()
 }
 
 
-// Function CriWareRuntime.AtomProfileData.CriWareAdx2ProfileDataUpdate
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UObject*                 WorldContextObject             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FAtomProfileItem> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
-
-TArray<struct FAtomProfileItem> UAtomProfileData::STATIC_CriWareAdx2ProfileDataUpdate(class UObject* WorldContextObject)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomProfileData.CriWareAdx2ProfileDataUpdate");
-
-	UAtomProfileData_CriWareAdx2ProfileDataUpdate_Params params;
-	params.WorldContextObject = WorldContextObject;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function CriWareRuntime.AtomProfileData.CriWareAdx2ProfileDataSort
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// TArray<struct FAtomProfileItem> original_item                  (Parm, ZeroConstructor)
-// EAtomProfileSortType           sort_type                      (Parm, ZeroConstructor, IsPlainOldData)
-// EAtomSortOrderType             order_type                     (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FAtomProfileItem> sorted_item                    (Parm, OutParm, ZeroConstructor)
-
-void UAtomProfileData::STATIC_CriWareAdx2ProfileDataSort(TArray<struct FAtomProfileItem> original_item, EAtomProfileSortType sort_type, EAtomSortOrderType order_type, TArray<struct FAtomProfileItem>* sorted_item)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomProfileData.CriWareAdx2ProfileDataSort");
-
-	UAtomProfileData_CriWareAdx2ProfileDataSort_Params params;
-	params.original_item = original_item;
-	params.sort_type = sort_type;
-	params.order_type = order_type;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (sorted_item != nullptr)
-		*sorted_item = params.sorted_item;
-}
-
-
 // Function CriWareRuntime.AtomSpectrumAnalyzer.GetLevelsDB
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
@@ -3789,6 +3736,59 @@ void USoundAtomCueSheet::STATIC_ApplyDspBusSnapshot(const struct FString& Snapsh
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
+}
+
+
+// Function CriWareRuntime.AtomProfileData.CriWareAdx2ProfileDataUpdate
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                 WorldContextObject             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FAtomProfileItem> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+TArray<struct FAtomProfileItem> UAtomProfileData::STATIC_CriWareAdx2ProfileDataUpdate(class UObject* WorldContextObject)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomProfileData.CriWareAdx2ProfileDataUpdate");
+
+	UAtomProfileData_CriWareAdx2ProfileDataUpdate_Params params;
+	params.WorldContextObject = WorldContextObject;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function CriWareRuntime.AtomProfileData.CriWareAdx2ProfileDataSort
+// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// TArray<struct FAtomProfileItem> original_item                  (Parm, ZeroConstructor)
+// EAtomProfileSortType           sort_type                      (Parm, ZeroConstructor, IsPlainOldData)
+// EAtomSortOrderType             order_type                     (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FAtomProfileItem> sorted_item                    (Parm, OutParm, ZeroConstructor)
+
+void UAtomProfileData::STATIC_CriWareAdx2ProfileDataSort(TArray<struct FAtomProfileItem> original_item, EAtomProfileSortType sort_type, EAtomSortOrderType order_type, TArray<struct FAtomProfileItem>* sorted_item)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomProfileData.CriWareAdx2ProfileDataSort");
+
+	UAtomProfileData_CriWareAdx2ProfileDataSort_Params params;
+	params.original_item = original_item;
+	params.sort_type = sort_type;
+	params.order_type = order_type;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (sorted_item != nullptr)
+		*sorted_item = params.sorted_item;
 }
 
 

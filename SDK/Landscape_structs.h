@@ -23,16 +23,6 @@ enum class ELandscapeSetupErrors : uint8_t
 };
 
 
-// Enum Landscape.ELandscapeGizmoType
-enum class ELandscapeGizmoType : uint8_t
-{
-	LGT_None                       = 0,
-	LGT_Height                     = 1,
-	LGT_Weight                     = 2,
-	LGT_MAX                        = 3
-};
-
-
 // Enum Landscape.EGrassScaling
 enum class EGrassScaling : uint8_t
 {
@@ -73,12 +63,31 @@ enum class ELandscapeLayerPaintingRestriction : uint8_t
 };
 
 
+// Enum Landscape.ELandscapeGizmoType
+enum class ELandscapeGizmoType : uint8_t
+{
+	LGT_None                       = 0,
+	LGT_Height                     = 1,
+	LGT_Weight                     = 2,
+	LGT_MAX                        = 3
+};
+
+
 // Enum Landscape.ELandscapeImportAlphamapType
 enum class ELandscapeImportAlphamapType : uint8_t
 {
 	ELandscapeImportAlphamapType__Additive = 0,
 	ELandscapeImportAlphamapType__Layered = 1,
 	ELandscapeImportAlphamapType__ELandscapeImportAlphamapType_MAX = 2
+};
+
+
+// Enum Landscape.LandscapeSplineMeshOrientation
+enum class ELandscapeSplineMeshOrientation : uint8_t
+{
+	LSMO_XUp                       = 0,
+	LSMO_YUp                       = 1,
+	LSMO_MAX                       = 2
 };
 
 
@@ -112,15 +121,6 @@ enum class ETerrainCoordMappingType : uint8_t
 	TCMT_XZ                        = 2,
 	TCMT_YZ                        = 3,
 	TCMT_MAX                       = 4
-};
-
-
-// Enum Landscape.LandscapeSplineMeshOrientation
-enum class ELandscapeSplineMeshOrientation : uint8_t
-{
-	LSMO_XUp                       = 0,
-	LSMO_YUp                       = 1,
-	LSMO_MAX                       = 2
 };
 
 

@@ -336,25 +336,6 @@ public:
 };
 
 
-// Class UMG.AsyncTaskDownloadImage
-// 0x0020 (0x0050 - 0x0030)
-class UAsyncTaskDownloadImage : public UBlueprintAsyncActionBase
-{
-public:
-	struct FScriptMulticastDelegate                    OnSuccess;                                                // 0x0030(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnFail;                                                   // 0x0040(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class UMG.AsyncTaskDownloadImage");
-		return ptr;
-	}
-
-
-	class UAsyncTaskDownloadImage* STATIC_DownloadImage(const struct FString& URL);
-};
-
-
 // Class UMG.PanelWidget
 // 0x0018 (0x0118 - 0x0100)
 class UPanelWidget : public UWidget
@@ -555,6 +536,25 @@ public:
 };
 
 
+// Class UMG.AsyncTaskDownloadImage
+// 0x0020 (0x0050 - 0x0030)
+class UAsyncTaskDownloadImage : public UBlueprintAsyncActionBase
+{
+public:
+	struct FScriptMulticastDelegate                    OnSuccess;                                                // 0x0030(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnFail;                                                   // 0x0040(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class UMG.AsyncTaskDownloadImage");
+		return ptr;
+	}
+
+
+	class UAsyncTaskDownloadImage* STATIC_DownloadImage(const struct FString& URL);
+};
+
+
 // Class UMG.BorderSlot
 // 0x0028 (0x0060 - 0x0038)
 class UBorderSlot : public UPanelSlot
@@ -593,44 +593,6 @@ public:
 
 
 	struct FSlateBrush GetValue();
-};
-
-
-// Class UMG.Button
-// 0x0308 (0x0420 - 0x0118)
-class UButton : public UContentWidget
-{
-public:
-	class USlateWidgetStyleAsset*                      Style;                                                    // 0x0118(0x0008) (ZeroConstructor, Deprecated, IsPlainOldData)
-	struct FButtonStyle                                WidgetStyle;                                              // 0x0120(0x0278) (Edit, BlueprintVisible)
-	struct FLinearColor                                ColorAndOpacity;                                          // 0x0398(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FLinearColor                                BackgroundColor;                                          // 0x03A8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EButtonClickMethod>                    ClickMethod;                                              // 0x03B8(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EButtonTouchMethod>                    TouchMethod;                                              // 0x03B9(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EButtonPressMethod>                    PressMethod;                                              // 0x03BA(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	bool                                               IsFocusable;                                              // 0x03BB(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x03BC(0x0004) MISSED OFFSET
-	struct FScriptMulticastDelegate                    OnClicked;                                                // 0x03C0(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnPressed;                                                // 0x03D0(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnReleased;                                               // 0x03E0(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnHovered;                                                // 0x03F0(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnUnhovered;                                              // 0x0400(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData01[0x10];                                      // 0x0410(0x0010) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class UMG.Button");
-		return ptr;
-	}
-
-
-	void SetTouchMethod(TEnumAsByte<EButtonTouchMethod> InTouchMethod);
-	void SetStyle(const struct FButtonStyle& InStyle);
-	void SetPressMethod(TEnumAsByte<EButtonPressMethod> InPressMethod);
-	void SetColorAndOpacity(const struct FLinearColor& InColorAndOpacity);
-	void SetClickMethod(TEnumAsByte<EButtonClickMethod> InClickMethod);
-	void SetBackgroundColor(const struct FLinearColor& InBackgroundColor);
-	bool IsPressed();
 };
 
 
@@ -819,6 +781,44 @@ public:
 
 	struct FSlateColor GetSlateValue();
 	struct FLinearColor GetLinearValue();
+};
+
+
+// Class UMG.Button
+// 0x0308 (0x0420 - 0x0118)
+class UButton : public UContentWidget
+{
+public:
+	class USlateWidgetStyleAsset*                      Style;                                                    // 0x0118(0x0008) (ZeroConstructor, Deprecated, IsPlainOldData)
+	struct FButtonStyle                                WidgetStyle;                                              // 0x0120(0x0278) (Edit, BlueprintVisible)
+	struct FLinearColor                                ColorAndOpacity;                                          // 0x0398(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	struct FLinearColor                                BackgroundColor;                                          // 0x03A8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EButtonClickMethod>                    ClickMethod;                                              // 0x03B8(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EButtonTouchMethod>                    TouchMethod;                                              // 0x03B9(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EButtonPressMethod>                    PressMethod;                                              // 0x03BA(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool                                               IsFocusable;                                              // 0x03BB(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x03BC(0x0004) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnClicked;                                                // 0x03C0(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnPressed;                                                // 0x03D0(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnReleased;                                               // 0x03E0(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnHovered;                                                // 0x03F0(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnUnhovered;                                              // 0x0400(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	unsigned char                                      UnknownData01[0x10];                                      // 0x0410(0x0010) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class UMG.Button");
+		return ptr;
+	}
+
+
+	void SetTouchMethod(TEnumAsByte<EButtonTouchMethod> InTouchMethod);
+	void SetStyle(const struct FButtonStyle& InStyle);
+	void SetPressMethod(TEnumAsByte<EButtonPressMethod> InPressMethod);
+	void SetColorAndOpacity(const struct FLinearColor& InColorAndOpacity);
+	void SetClickMethod(TEnumAsByte<EButtonClickMethod> InClickMethod);
+	void SetBackgroundColor(const struct FLinearColor& InBackgroundColor);
+	bool IsPressed();
 };
 
 
@@ -1861,33 +1861,6 @@ public:
 };
 
 
-// Class UMG.ScaleBox
-// 0x0020 (0x0138 - 0x0118)
-class UScaleBox : public UContentWidget
-{
-public:
-	TEnumAsByte<EStretch>                              Stretch;                                                  // 0x0118(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EStretchDirection>                     StretchDirection;                                         // 0x0119(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x2];                                       // 0x011A(0x0002) MISSED OFFSET
-	float                                              UserSpecifiedScale;                                       // 0x011C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	bool                                               IgnoreInheritedScale;                                     // 0x0120(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	bool                                               bSingleLayoutPass;                                        // 0x0121(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x16];                                      // 0x0122(0x0016) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class UMG.ScaleBox");
-		return ptr;
-	}
-
-
-	void SetUserSpecifiedScale(float InUserSpecifiedScale);
-	void SetStretchDirection(TEnumAsByte<EStretchDirection> InStretchDirection);
-	void SetStretch(TEnumAsByte<EStretch> InStretch);
-	void SetIgnoreInheritedScale(bool bInIgnoreInheritedScale);
-};
-
-
 // Class UMG.ScaleBoxSlot
 // 0x0028 (0x0060 - 0x0038)
 class UScaleBoxSlot : public UPanelSlot
@@ -2000,6 +1973,33 @@ public:
 	void SetVerticalAlignment(TEnumAsByte<EVerticalAlignment> InVerticalAlignment);
 	void SetPadding(const struct FMargin& InPadding);
 	void SetHorizontalAlignment(TEnumAsByte<EHorizontalAlignment> InHorizontalAlignment);
+};
+
+
+// Class UMG.ScaleBox
+// 0x0020 (0x0138 - 0x0118)
+class UScaleBox : public UContentWidget
+{
+public:
+	TEnumAsByte<EStretch>                              Stretch;                                                  // 0x0118(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EStretchDirection>                     StretchDirection;                                         // 0x0119(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x2];                                       // 0x011A(0x0002) MISSED OFFSET
+	float                                              UserSpecifiedScale;                                       // 0x011C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool                                               IgnoreInheritedScale;                                     // 0x0120(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool                                               bSingleLayoutPass;                                        // 0x0121(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x16];                                      // 0x0122(0x0016) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class UMG.ScaleBox");
+		return ptr;
+	}
+
+
+	void SetUserSpecifiedScale(float InUserSpecifiedScale);
+	void SetStretchDirection(TEnumAsByte<EStretchDirection> InStretchDirection);
+	void SetStretch(TEnumAsByte<EStretch> InStretch);
+	void SetIgnoreInheritedScale(bool bInIgnoreInheritedScale);
 };
 
 
@@ -2245,25 +2245,6 @@ public:
 };
 
 
-// Class UMG.TextBinding
-// 0x0008 (0x0068 - 0x0060)
-class UTextBinding : public UPropertyBinding
-{
-public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0060(0x0008) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class UMG.TextBinding");
-		return ptr;
-	}
-
-
-	struct FText GetTextValue();
-	struct FString GetStringValue();
-};
-
-
 // Class UMG.TextBlock
 // 0x00F8 (0x0218 - 0x0120)
 class UTextBlock : public UTextLayoutWidget
@@ -2396,27 +2377,22 @@ public:
 };
 
 
-// Class UMG.UniformGridPanel
-// 0x0028 (0x0140 - 0x0118)
-class UUniformGridPanel : public UPanelWidget
+// Class UMG.TextBinding
+// 0x0008 (0x0068 - 0x0060)
+class UTextBinding : public UPropertyBinding
 {
 public:
-	struct FMargin                                     SlotPadding;                                              // 0x0118(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              MinDesiredSlotWidth;                                      // 0x0128(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              MinDesiredSlotHeight;                                     // 0x012C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0130(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0060(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class UMG.UniformGridPanel");
+		static auto ptr = UObject::FindClass("Class UMG.TextBinding");
 		return ptr;
 	}
 
 
-	void SetSlotPadding(const struct FMargin& InSlotPadding);
-	void SetMinDesiredSlotWidth(float InMinDesiredSlotWidth);
-	void SetMinDesiredSlotHeight(float InMinDesiredSlotHeight);
-	class UUniformGridSlot* AddChildToUniformGrid(class UWidget* Content);
+	struct FText GetTextValue();
+	struct FString GetStringValue();
 };
 
 
@@ -2530,6 +2506,30 @@ public:
 };
 
 
+// Class UMG.UniformGridPanel
+// 0x0028 (0x0140 - 0x0118)
+class UUniformGridPanel : public UPanelWidget
+{
+public:
+	struct FMargin                                     SlotPadding;                                              // 0x0118(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              MinDesiredSlotWidth;                                      // 0x0128(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              MinDesiredSlotHeight;                                     // 0x012C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0130(0x0010) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class UMG.UniformGridPanel");
+		return ptr;
+	}
+
+
+	void SetSlotPadding(const struct FMargin& InSlotPadding);
+	void SetMinDesiredSlotWidth(float InMinDesiredSlotWidth);
+	void SetMinDesiredSlotHeight(float InMinDesiredSlotHeight);
+	class UUniformGridSlot* AddChildToUniformGrid(class UWidget* Content);
+};
+
+
 // Class UMG.WidgetAnimation
 // 0x0050 (0x0398 - 0x0348)
 class UWidgetAnimation : public UMovieSceneSequence
@@ -2597,77 +2597,6 @@ public:
 		return ptr;
 	}
 
-};
-
-
-// Class UMG.WidgetBlueprintLibrary
-// 0x0000 (0x0028 - 0x0028)
-class UWidgetBlueprintLibrary : public UBlueprintFunctionLibrary
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class UMG.WidgetBlueprintLibrary");
-		return ptr;
-	}
-
-
-	struct FEventReply STATIC_UnlockMouse(struct FEventReply* Reply);
-	struct FEventReply STATIC_Unhandled();
-	void STATIC_SetWindowTitleBarState(class UWidget* TitleBarContent, EWindowTitleBarMode Mode, bool bTitleBarDragEnabled, bool bWindowButtonsVisible, bool bTitleBarVisible);
-	void STATIC_SetWindowTitleBarOnCloseClickedDelegate(const struct FScriptDelegate& Delegate);
-	void STATIC_SetWindowTitleBarCloseButtonActive(bool bActive);
-	struct FEventReply STATIC_SetUserFocus(class UWidget* FocusWidget, bool bInAllUsers, struct FEventReply* Reply);
-	struct FEventReply STATIC_SetMousePosition(const struct FVector2D& NewMousePosition, struct FEventReply* Reply);
-	void STATIC_SetInputMode_UIOnlyEx(class APlayerController* PlayerController, class UWidget* InWidgetToFocus, EMouseLockMode InMouseLockMode);
-	void STATIC_SetInputMode_UIOnly(class APlayerController* Target, class UWidget* InWidgetToFocus, bool bLockMouseToViewport);
-	void STATIC_SetInputMode_GameOnly(class APlayerController* PlayerController);
-	void STATIC_SetInputMode_GameAndUIEx(class APlayerController* PlayerController, class UWidget* InWidgetToFocus, EMouseLockMode InMouseLockMode, bool bHideCursorDuringCapture);
-	void STATIC_SetInputMode_GameAndUI(class APlayerController* Target, class UWidget* InWidgetToFocus, bool bLockMouseToViewport, bool bHideCursorDuringCapture);
-	bool STATIC_SetHardwareCursor(class UObject* WorldContextObject, TEnumAsByte<EMouseCursor> CursorShape, const struct FName& CursorName, const struct FVector2D& HotSpot);
-	void STATIC_SetFocusToGameViewport();
-	void STATIC_SetBrushResourceToTexture(class UTexture2D* Texture, struct FSlateBrush* Brush);
-	void STATIC_SetBrushResourceToMaterial(class UMaterialInterface* Material, struct FSlateBrush* Brush);
-	void STATIC_RestorePreviousWindowTitleBarState();
-	struct FEventReply STATIC_ReleaseMouseCapture(struct FEventReply* Reply);
-	struct FEventReply STATIC_ReleaseJoystickCapture(bool bInAllJoysticks, struct FEventReply* Reply);
-	void OnGameWindowCloseButtonClickedDelegate__DelegateSignature();
-	struct FSlateBrush STATIC_NoResourceBrush();
-	struct FSlateBrush STATIC_MakeBrushFromTexture(class UTexture2D* Texture, int Width, int Height);
-	struct FSlateBrush STATIC_MakeBrushFromMaterial(class UMaterialInterface* Material, int Width, int Height);
-	struct FSlateBrush STATIC_MakeBrushFromAsset(class USlateBrushAsset* BrushAsset);
-	struct FEventReply STATIC_LockMouse(class UWidget* CapturingWidget, struct FEventReply* Reply);
-	bool STATIC_IsDragDropping();
-	struct FEventReply STATIC_Handled();
-	void STATIC_GetSafeZonePadding(class UObject* WorldContextObject, struct FVector4* SafePadding, struct FVector2D* SafePaddingScale, struct FVector4* SpillOverPadding);
-	struct FKeyEvent STATIC_GetKeyEventFromAnalogInputEvent(const struct FAnalogInputEvent& Event);
-	struct FInputEvent STATIC_GetInputEventFromPointerEvent(const struct FPointerEvent& Event);
-	struct FInputEvent STATIC_GetInputEventFromNavigationEvent(const struct FNavigationEvent& Event);
-	struct FInputEvent STATIC_GetInputEventFromKeyEvent(const struct FKeyEvent& Event);
-	struct FInputEvent STATIC_GetInputEventFromCharacterEvent(const struct FCharacterEvent& Event);
-	class UMaterialInstanceDynamic* STATIC_GetDynamicMaterial(struct FSlateBrush* Brush);
-	class UDragDropOperation* STATIC_GetDragDroppingContent();
-	class UTexture2D* STATIC_GetBrushResourceAsTexture2D(const struct FSlateBrush& Brush);
-	class UMaterialInterface* STATIC_GetBrushResourceAsMaterial(const struct FSlateBrush& Brush);
-	class UObject* STATIC_GetBrushResource(const struct FSlateBrush& Brush);
-	void STATIC_GetAllWidgetsWithInterface(class UObject* WorldContextObject, class UClass* Interface, bool TopLevelOnly, TArray<class UUserWidget*>* FoundWidgets);
-	void STATIC_GetAllWidgetsOfClass(class UObject* WorldContextObject, class UClass* WidgetClass, bool TopLevelOnly, TArray<class UUserWidget*>* FoundWidgets);
-	struct FEventReply STATIC_EndDragDrop(struct FEventReply* Reply);
-	void STATIC_DrawTextFormatted(const struct FText& Text, const struct FVector2D& Position, class UFont* Font, int FontSize, const struct FName& FontTypeFace, const struct FLinearColor& Tint, struct FPaintContext* Context);
-	void STATIC_DrawText(const struct FString& inString, const struct FVector2D& Position, const struct FLinearColor& Tint, struct FPaintContext* Context);
-	void STATIC_DrawLines(TArray<struct FVector2D> Points, const struct FLinearColor& Tint, bool bAntiAlias, struct FPaintContext* Context);
-	void STATIC_DrawLine(const struct FVector2D& PositionA, const struct FVector2D& PositionB, const struct FLinearColor& Tint, bool bAntiAlias, struct FPaintContext* Context);
-	void STATIC_DrawBox(const struct FVector2D& Position, const struct FVector2D& Size, class USlateBrushAsset* Brush, const struct FLinearColor& Tint, struct FPaintContext* Context);
-	void STATIC_DismissAllMenus();
-	struct FEventReply STATIC_DetectDragIfPressed(const struct FPointerEvent& PointerEvent, class UWidget* WidgetDetectingDrag, const struct FKey& DragKey);
-	struct FEventReply STATIC_DetectDrag(class UWidget* WidgetDetectingDrag, const struct FKey& DragKey, struct FEventReply* Reply);
-	class UDragDropOperation* STATIC_CreateDragDropOperation(class UClass* OperationClass);
-	class UUserWidget* STATIC_Create(class UObject* WorldContextObject, class UClass* WidgetType, class APlayerController* OwningPlayer);
-	struct FEventReply STATIC_ClearUserFocus(bool bInAllUsers, struct FEventReply* Reply);
-	struct FEventReply STATIC_CaptureMouse(class UWidget* CapturingWidget, struct FEventReply* Reply);
-	struct FEventReply STATIC_CaptureJoystick(class UWidget* CapturingWidget, bool bInAllJoysticks, struct FEventReply* Reply);
-	void STATIC_CancelDragDrop();
 };
 
 
@@ -3010,6 +2939,77 @@ public:
 	void SetHorizontalAlignment(TEnumAsByte<EHorizontalAlignment> InHorizontalAlignment);
 	void SetFillSpanWhenLessThan(float InFillSpanWhenLessThan);
 	void SetFillEmptySpace(bool InbFillEmptySpace);
+};
+
+
+// Class UMG.WidgetBlueprintLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UWidgetBlueprintLibrary : public UBlueprintFunctionLibrary
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class UMG.WidgetBlueprintLibrary");
+		return ptr;
+	}
+
+
+	struct FEventReply STATIC_UnlockMouse(struct FEventReply* Reply);
+	struct FEventReply STATIC_Unhandled();
+	void STATIC_SetWindowTitleBarState(class UWidget* TitleBarContent, EWindowTitleBarMode Mode, bool bTitleBarDragEnabled, bool bWindowButtonsVisible, bool bTitleBarVisible);
+	void STATIC_SetWindowTitleBarOnCloseClickedDelegate(const struct FScriptDelegate& Delegate);
+	void STATIC_SetWindowTitleBarCloseButtonActive(bool bActive);
+	struct FEventReply STATIC_SetUserFocus(class UWidget* FocusWidget, bool bInAllUsers, struct FEventReply* Reply);
+	struct FEventReply STATIC_SetMousePosition(const struct FVector2D& NewMousePosition, struct FEventReply* Reply);
+	void STATIC_SetInputMode_UIOnlyEx(class APlayerController* PlayerController, class UWidget* InWidgetToFocus, EMouseLockMode InMouseLockMode);
+	void STATIC_SetInputMode_UIOnly(class APlayerController* Target, class UWidget* InWidgetToFocus, bool bLockMouseToViewport);
+	void STATIC_SetInputMode_GameOnly(class APlayerController* PlayerController);
+	void STATIC_SetInputMode_GameAndUIEx(class APlayerController* PlayerController, class UWidget* InWidgetToFocus, EMouseLockMode InMouseLockMode, bool bHideCursorDuringCapture);
+	void STATIC_SetInputMode_GameAndUI(class APlayerController* Target, class UWidget* InWidgetToFocus, bool bLockMouseToViewport, bool bHideCursorDuringCapture);
+	bool STATIC_SetHardwareCursor(class UObject* WorldContextObject, TEnumAsByte<EMouseCursor> CursorShape, const struct FName& CursorName, const struct FVector2D& HotSpot);
+	void STATIC_SetFocusToGameViewport();
+	void STATIC_SetBrushResourceToTexture(class UTexture2D* Texture, struct FSlateBrush* Brush);
+	void STATIC_SetBrushResourceToMaterial(class UMaterialInterface* Material, struct FSlateBrush* Brush);
+	void STATIC_RestorePreviousWindowTitleBarState();
+	struct FEventReply STATIC_ReleaseMouseCapture(struct FEventReply* Reply);
+	struct FEventReply STATIC_ReleaseJoystickCapture(bool bInAllJoysticks, struct FEventReply* Reply);
+	void OnGameWindowCloseButtonClickedDelegate__DelegateSignature();
+	struct FSlateBrush STATIC_NoResourceBrush();
+	struct FSlateBrush STATIC_MakeBrushFromTexture(class UTexture2D* Texture, int Width, int Height);
+	struct FSlateBrush STATIC_MakeBrushFromMaterial(class UMaterialInterface* Material, int Width, int Height);
+	struct FSlateBrush STATIC_MakeBrushFromAsset(class USlateBrushAsset* BrushAsset);
+	struct FEventReply STATIC_LockMouse(class UWidget* CapturingWidget, struct FEventReply* Reply);
+	bool STATIC_IsDragDropping();
+	struct FEventReply STATIC_Handled();
+	void STATIC_GetSafeZonePadding(class UObject* WorldContextObject, struct FVector4* SafePadding, struct FVector2D* SafePaddingScale, struct FVector4* SpillOverPadding);
+	struct FKeyEvent STATIC_GetKeyEventFromAnalogInputEvent(const struct FAnalogInputEvent& Event);
+	struct FInputEvent STATIC_GetInputEventFromPointerEvent(const struct FPointerEvent& Event);
+	struct FInputEvent STATIC_GetInputEventFromNavigationEvent(const struct FNavigationEvent& Event);
+	struct FInputEvent STATIC_GetInputEventFromKeyEvent(const struct FKeyEvent& Event);
+	struct FInputEvent STATIC_GetInputEventFromCharacterEvent(const struct FCharacterEvent& Event);
+	class UMaterialInstanceDynamic* STATIC_GetDynamicMaterial(struct FSlateBrush* Brush);
+	class UDragDropOperation* STATIC_GetDragDroppingContent();
+	class UTexture2D* STATIC_GetBrushResourceAsTexture2D(const struct FSlateBrush& Brush);
+	class UMaterialInterface* STATIC_GetBrushResourceAsMaterial(const struct FSlateBrush& Brush);
+	class UObject* STATIC_GetBrushResource(const struct FSlateBrush& Brush);
+	void STATIC_GetAllWidgetsWithInterface(class UObject* WorldContextObject, class UClass* Interface, bool TopLevelOnly, TArray<class UUserWidget*>* FoundWidgets);
+	void STATIC_GetAllWidgetsOfClass(class UObject* WorldContextObject, class UClass* WidgetClass, bool TopLevelOnly, TArray<class UUserWidget*>* FoundWidgets);
+	struct FEventReply STATIC_EndDragDrop(struct FEventReply* Reply);
+	void STATIC_DrawTextFormatted(const struct FText& Text, const struct FVector2D& Position, class UFont* Font, int FontSize, const struct FName& FontTypeFace, const struct FLinearColor& Tint, struct FPaintContext* Context);
+	void STATIC_DrawText(const struct FString& inString, const struct FVector2D& Position, const struct FLinearColor& Tint, struct FPaintContext* Context);
+	void STATIC_DrawLines(TArray<struct FVector2D> Points, const struct FLinearColor& Tint, bool bAntiAlias, struct FPaintContext* Context);
+	void STATIC_DrawLine(const struct FVector2D& PositionA, const struct FVector2D& PositionB, const struct FLinearColor& Tint, bool bAntiAlias, struct FPaintContext* Context);
+	void STATIC_DrawBox(const struct FVector2D& Position, const struct FVector2D& Size, class USlateBrushAsset* Brush, const struct FLinearColor& Tint, struct FPaintContext* Context);
+	void STATIC_DismissAllMenus();
+	struct FEventReply STATIC_DetectDragIfPressed(const struct FPointerEvent& PointerEvent, class UWidget* WidgetDetectingDrag, const struct FKey& DragKey);
+	struct FEventReply STATIC_DetectDrag(class UWidget* WidgetDetectingDrag, const struct FKey& DragKey, struct FEventReply* Reply);
+	class UDragDropOperation* STATIC_CreateDragDropOperation(class UClass* OperationClass);
+	class UUserWidget* STATIC_Create(class UObject* WorldContextObject, class UClass* WidgetType, class APlayerController* OwningPlayer);
+	struct FEventReply STATIC_ClearUserFocus(bool bInAllUsers, struct FEventReply* Reply);
+	struct FEventReply STATIC_CaptureMouse(class UWidget* CapturingWidget, struct FEventReply* Reply);
+	struct FEventReply STATIC_CaptureJoystick(class UWidget* CapturingWidget, bool bInAllJoysticks, struct FEventReply* Reply);
+	void STATIC_CancelDragDrop();
 };
 
 

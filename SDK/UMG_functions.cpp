@@ -3268,30 +3268,6 @@ class URichTextBlockDecorator* URichTextBlock::GetDecoratorByClass(class UClass*
 }
 
 
-// Function UMG.AsyncTaskDownloadImage.DownloadImage
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// struct FString                 URL                            (Parm, ZeroConstructor)
-// class UAsyncTaskDownloadImage* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class UAsyncTaskDownloadImage* UAsyncTaskDownloadImage::STATIC_DownloadImage(const struct FString& URL)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.AsyncTaskDownloadImage.DownloadImage");
-
-	UAsyncTaskDownloadImage_DownloadImage_Params params;
-	params.URL = URL;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
 // Function UMG.PanelWidget.RemoveChildAt
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -4030,6 +4006,30 @@ class UMaterialInstanceDynamic* UBorder::GetDynamicMaterial()
 }
 
 
+// Function UMG.AsyncTaskDownloadImage.DownloadImage
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// struct FString                 URL                            (Parm, ZeroConstructor)
+// class UAsyncTaskDownloadImage* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UAsyncTaskDownloadImage* UAsyncTaskDownloadImage::STATIC_DownloadImage(const struct FString& URL)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.AsyncTaskDownloadImage.DownloadImage");
+
+	UAsyncTaskDownloadImage_DownloadImage_Params params;
+	params.URL = URL;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function UMG.BorderSlot.SetVerticalAlignment
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -4103,154 +4103,6 @@ struct FSlateBrush UBrushBinding::GetValue()
 	static auto fn = UObject::FindObject<UFunction>("Function UMG.BrushBinding.GetValue");
 
 	UBrushBinding_GetValue_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function UMG.Button.SetTouchMethod
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// TEnumAsByte<EButtonTouchMethod> InTouchMethod                  (Parm, ZeroConstructor, IsPlainOldData)
-
-void UButton::SetTouchMethod(TEnumAsByte<EButtonTouchMethod> InTouchMethod)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Button.SetTouchMethod");
-
-	UButton_SetTouchMethod_Params params;
-	params.InTouchMethod = InTouchMethod;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function UMG.Button.SetStyle
-// (Final, Native, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// struct FButtonStyle            InStyle                        (ConstParm, Parm, OutParm, ReferenceParm)
-
-void UButton::SetStyle(const struct FButtonStyle& InStyle)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Button.SetStyle");
-
-	UButton_SetStyle_Params params;
-	params.InStyle = InStyle;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function UMG.Button.SetPressMethod
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// TEnumAsByte<EButtonPressMethod> InPressMethod                  (Parm, ZeroConstructor, IsPlainOldData)
-
-void UButton::SetPressMethod(TEnumAsByte<EButtonPressMethod> InPressMethod)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Button.SetPressMethod");
-
-	UButton_SetPressMethod_Params params;
-	params.InPressMethod = InPressMethod;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function UMG.Button.SetColorAndOpacity
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FLinearColor            InColorAndOpacity              (Parm, ZeroConstructor, IsPlainOldData)
-
-void UButton::SetColorAndOpacity(const struct FLinearColor& InColorAndOpacity)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Button.SetColorAndOpacity");
-
-	UButton_SetColorAndOpacity_Params params;
-	params.InColorAndOpacity = InColorAndOpacity;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function UMG.Button.SetClickMethod
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// TEnumAsByte<EButtonClickMethod> InClickMethod                  (Parm, ZeroConstructor, IsPlainOldData)
-
-void UButton::SetClickMethod(TEnumAsByte<EButtonClickMethod> InClickMethod)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Button.SetClickMethod");
-
-	UButton_SetClickMethod_Params params;
-	params.InClickMethod = InClickMethod;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function UMG.Button.SetBackgroundColor
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FLinearColor            InBackgroundColor              (Parm, ZeroConstructor, IsPlainOldData)
-
-void UButton::SetBackgroundColor(const struct FLinearColor& InBackgroundColor)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Button.SetBackgroundColor");
-
-	UButton_SetBackgroundColor_Params params;
-	params.InBackgroundColor = InBackgroundColor;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function UMG.Button.IsPressed
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UButton::IsPressed()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Button.IsPressed");
-
-	UButton_IsPressed_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -4961,6 +4813,154 @@ struct FLinearColor UColorBinding::GetLinearValue()
 	static auto fn = UObject::FindObject<UFunction>("Function UMG.ColorBinding.GetLinearValue");
 
 	UColorBinding_GetLinearValue_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function UMG.Button.SetTouchMethod
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// TEnumAsByte<EButtonTouchMethod> InTouchMethod                  (Parm, ZeroConstructor, IsPlainOldData)
+
+void UButton::SetTouchMethod(TEnumAsByte<EButtonTouchMethod> InTouchMethod)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.Button.SetTouchMethod");
+
+	UButton_SetTouchMethod_Params params;
+	params.InTouchMethod = InTouchMethod;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UMG.Button.SetStyle
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// struct FButtonStyle            InStyle                        (ConstParm, Parm, OutParm, ReferenceParm)
+
+void UButton::SetStyle(const struct FButtonStyle& InStyle)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.Button.SetStyle");
+
+	UButton_SetStyle_Params params;
+	params.InStyle = InStyle;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UMG.Button.SetPressMethod
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// TEnumAsByte<EButtonPressMethod> InPressMethod                  (Parm, ZeroConstructor, IsPlainOldData)
+
+void UButton::SetPressMethod(TEnumAsByte<EButtonPressMethod> InPressMethod)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.Button.SetPressMethod");
+
+	UButton_SetPressMethod_Params params;
+	params.InPressMethod = InPressMethod;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UMG.Button.SetColorAndOpacity
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FLinearColor            InColorAndOpacity              (Parm, ZeroConstructor, IsPlainOldData)
+
+void UButton::SetColorAndOpacity(const struct FLinearColor& InColorAndOpacity)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.Button.SetColorAndOpacity");
+
+	UButton_SetColorAndOpacity_Params params;
+	params.InColorAndOpacity = InColorAndOpacity;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UMG.Button.SetClickMethod
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// TEnumAsByte<EButtonClickMethod> InClickMethod                  (Parm, ZeroConstructor, IsPlainOldData)
+
+void UButton::SetClickMethod(TEnumAsByte<EButtonClickMethod> InClickMethod)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.Button.SetClickMethod");
+
+	UButton_SetClickMethod_Params params;
+	params.InClickMethod = InClickMethod;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UMG.Button.SetBackgroundColor
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FLinearColor            InBackgroundColor              (Parm, ZeroConstructor, IsPlainOldData)
+
+void UButton::SetBackgroundColor(const struct FLinearColor& InBackgroundColor)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.Button.SetBackgroundColor");
+
+	UButton_SetBackgroundColor_Params params;
+	params.InBackgroundColor = InBackgroundColor;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UMG.Button.IsPressed
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UButton::IsPressed()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.Button.IsPressed");
+
+	UButton_IsPressed_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -7896,90 +7896,6 @@ void USafeZone::SetSidesToPad(bool InPadLeft, bool InPadRight, bool InPadTop, bo
 }
 
 
-// Function UMG.ScaleBox.SetUserSpecifiedScale
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                          InUserSpecifiedScale           (Parm, ZeroConstructor, IsPlainOldData)
-
-void UScaleBox::SetUserSpecifiedScale(float InUserSpecifiedScale)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.ScaleBox.SetUserSpecifiedScale");
-
-	UScaleBox_SetUserSpecifiedScale_Params params;
-	params.InUserSpecifiedScale = InUserSpecifiedScale;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function UMG.ScaleBox.SetStretchDirection
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// TEnumAsByte<EStretchDirection> InStretchDirection             (Parm, ZeroConstructor, IsPlainOldData)
-
-void UScaleBox::SetStretchDirection(TEnumAsByte<EStretchDirection> InStretchDirection)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.ScaleBox.SetStretchDirection");
-
-	UScaleBox_SetStretchDirection_Params params;
-	params.InStretchDirection = InStretchDirection;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function UMG.ScaleBox.SetStretch
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// TEnumAsByte<EStretch>          InStretch                      (Parm, ZeroConstructor, IsPlainOldData)
-
-void UScaleBox::SetStretch(TEnumAsByte<EStretch> InStretch)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.ScaleBox.SetStretch");
-
-	UScaleBox_SetStretch_Params params;
-	params.InStretch = InStretch;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function UMG.ScaleBox.SetIgnoreInheritedScale
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                           bInIgnoreInheritedScale        (Parm, ZeroConstructor, IsPlainOldData)
-
-void UScaleBox::SetIgnoreInheritedScale(bool bInIgnoreInheritedScale)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.ScaleBox.SetIgnoreInheritedScale");
-
-	UScaleBox_SetIgnoreInheritedScale_Params params;
-	params.bInIgnoreInheritedScale = bInIgnoreInheritedScale;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function UMG.ScaleBoxSlot.SetVerticalAlignment
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -8350,6 +8266,90 @@ void UScrollBoxSlot::SetHorizontalAlignment(TEnumAsByte<EHorizontalAlignment> In
 
 	UScrollBoxSlot_SetHorizontalAlignment_Params params;
 	params.InHorizontalAlignment = InHorizontalAlignment;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UMG.ScaleBox.SetUserSpecifiedScale
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                          InUserSpecifiedScale           (Parm, ZeroConstructor, IsPlainOldData)
+
+void UScaleBox::SetUserSpecifiedScale(float InUserSpecifiedScale)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.ScaleBox.SetUserSpecifiedScale");
+
+	UScaleBox_SetUserSpecifiedScale_Params params;
+	params.InUserSpecifiedScale = InUserSpecifiedScale;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UMG.ScaleBox.SetStretchDirection
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// TEnumAsByte<EStretchDirection> InStretchDirection             (Parm, ZeroConstructor, IsPlainOldData)
+
+void UScaleBox::SetStretchDirection(TEnumAsByte<EStretchDirection> InStretchDirection)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.ScaleBox.SetStretchDirection");
+
+	UScaleBox_SetStretchDirection_Params params;
+	params.InStretchDirection = InStretchDirection;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UMG.ScaleBox.SetStretch
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// TEnumAsByte<EStretch>          InStretch                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void UScaleBox::SetStretch(TEnumAsByte<EStretch> InStretch)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.ScaleBox.SetStretch");
+
+	UScaleBox_SetStretch_Params params;
+	params.InStretch = InStretch;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UMG.ScaleBox.SetIgnoreInheritedScale
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           bInIgnoreInheritedScale        (Parm, ZeroConstructor, IsPlainOldData)
+
+void UScaleBox::SetIgnoreInheritedScale(bool bInIgnoreInheritedScale)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.ScaleBox.SetIgnoreInheritedScale");
+
+	UScaleBox_SetIgnoreInheritedScale_Params params;
+	params.bInIgnoreInheritedScale = bInIgnoreInheritedScale;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -9529,50 +9529,6 @@ void USpinBox::ClearMaxSliderValue()
 }
 
 
-// Function UMG.TextBinding.GetTextValue
-// (Final, Native, Public, Const)
-// Parameters:
-// struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FText UTextBinding::GetTextValue()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.TextBinding.GetTextValue");
-
-	UTextBinding_GetTextValue_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function UMG.TextBinding.GetStringValue
-// (Final, Native, Public, Const)
-// Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
-
-struct FString UTextBinding::GetStringValue()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.TextBinding.GetStringValue");
-
-	UTextBinding_GetStringValue_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
 // Function UMG.TextBlock.SetText
 // (Native, Public, BlueprintCallable)
 // Parameters:
@@ -10013,17 +9969,16 @@ void UTreeView::CollapseAll()
 }
 
 
-// Function UMG.UniformGridPanel.SetSlotPadding
-// (Final, Native, Public, BlueprintCallable)
+// Function UMG.TextBinding.GetTextValue
+// (Final, Native, Public, Const)
 // Parameters:
-// struct FMargin                 InSlotPadding                  (Parm, ZeroConstructor, IsPlainOldData)
+// struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
-void UUniformGridPanel::SetSlotPadding(const struct FMargin& InSlotPadding)
+struct FText UTextBinding::GetTextValue()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UniformGridPanel.SetSlotPadding");
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.TextBinding.GetTextValue");
 
-	UUniformGridPanel_SetSlotPadding_Params params;
-	params.InSlotPadding = InSlotPadding;
+	UTextBinding_GetTextValue_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -10031,63 +9986,21 @@ void UUniformGridPanel::SetSlotPadding(const struct FMargin& InSlotPadding)
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
 }
 
 
-// Function UMG.UniformGridPanel.SetMinDesiredSlotWidth
-// (Final, Native, Public, BlueprintCallable)
+// Function UMG.TextBinding.GetStringValue
+// (Final, Native, Public, Const)
 // Parameters:
-// float                          InMinDesiredSlotWidth          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-void UUniformGridPanel::SetMinDesiredSlotWidth(float InMinDesiredSlotWidth)
+struct FString UTextBinding::GetStringValue()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UniformGridPanel.SetMinDesiredSlotWidth");
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.TextBinding.GetStringValue");
 
-	UUniformGridPanel_SetMinDesiredSlotWidth_Params params;
-	params.InMinDesiredSlotWidth = InMinDesiredSlotWidth;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function UMG.UniformGridPanel.SetMinDesiredSlotHeight
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                          InMinDesiredSlotHeight         (Parm, ZeroConstructor, IsPlainOldData)
-
-void UUniformGridPanel::SetMinDesiredSlotHeight(float InMinDesiredSlotHeight)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UniformGridPanel.SetMinDesiredSlotHeight");
-
-	UUniformGridPanel_SetMinDesiredSlotHeight_Params params;
-	params.InMinDesiredSlotHeight = InMinDesiredSlotHeight;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function UMG.UniformGridPanel.AddChildToUniformGrid
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UWidget*                 Content                        (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class UUniformGridSlot*        ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
-
-class UUniformGridSlot* UUniformGridPanel::AddChildToUniformGrid(class UWidget* Content)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UniformGridPanel.AddChildToUniformGrid");
-
-	UUniformGridPanel_AddChildToUniformGrid_Params params;
-	params.Content = Content;
+	UTextBinding_GetStringValue_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -10446,6 +10359,93 @@ ESlateVisibility UVisibilityBinding::GetValue()
 }
 
 
+// Function UMG.UniformGridPanel.SetSlotPadding
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FMargin                 InSlotPadding                  (Parm, ZeroConstructor, IsPlainOldData)
+
+void UUniformGridPanel::SetSlotPadding(const struct FMargin& InSlotPadding)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.UniformGridPanel.SetSlotPadding");
+
+	UUniformGridPanel_SetSlotPadding_Params params;
+	params.InSlotPadding = InSlotPadding;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UMG.UniformGridPanel.SetMinDesiredSlotWidth
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                          InMinDesiredSlotWidth          (Parm, ZeroConstructor, IsPlainOldData)
+
+void UUniformGridPanel::SetMinDesiredSlotWidth(float InMinDesiredSlotWidth)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.UniformGridPanel.SetMinDesiredSlotWidth");
+
+	UUniformGridPanel_SetMinDesiredSlotWidth_Params params;
+	params.InMinDesiredSlotWidth = InMinDesiredSlotWidth;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UMG.UniformGridPanel.SetMinDesiredSlotHeight
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                          InMinDesiredSlotHeight         (Parm, ZeroConstructor, IsPlainOldData)
+
+void UUniformGridPanel::SetMinDesiredSlotHeight(float InMinDesiredSlotHeight)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.UniformGridPanel.SetMinDesiredSlotHeight");
+
+	UUniformGridPanel_SetMinDesiredSlotHeight_Params params;
+	params.InMinDesiredSlotHeight = InMinDesiredSlotHeight;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UMG.UniformGridPanel.AddChildToUniformGrid
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UWidget*                 Content                        (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UUniformGridSlot*        ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+
+class UUniformGridSlot* UUniformGridPanel::AddChildToUniformGrid(class UWidget* Content)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.UniformGridPanel.AddChildToUniformGrid");
+
+	UUniformGridPanel_AddChildToUniformGrid_Params params;
+	params.Content = Content;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function UMG.WidgetAnimation.GetStartTime
 // (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -10509,1411 +10509,6 @@ class UWidget* UWidgetBinding::GetValue()
 	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.UnlockMouse
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
-// Parameters:
-// struct FEventReply             Reply                          (Parm, OutParm, ReferenceParm)
-// struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FEventReply UWidgetBlueprintLibrary::STATIC_UnlockMouse(struct FEventReply* Reply)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.UnlockMouse");
-
-	UWidgetBlueprintLibrary_UnlockMouse_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (Reply != nullptr)
-		*Reply = params.Reply;
-
-	return params.ReturnValue;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.Unhandled
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FEventReply UWidgetBlueprintLibrary::STATIC_Unhandled()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.Unhandled");
-
-	UWidgetBlueprintLibrary_Unhandled_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.SetWindowTitleBarState
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UWidget*                 TitleBarContent                (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// EWindowTitleBarMode            Mode                           (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bTitleBarDragEnabled           (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bWindowButtonsVisible          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bTitleBarVisible               (Parm, ZeroConstructor, IsPlainOldData)
-
-void UWidgetBlueprintLibrary::STATIC_SetWindowTitleBarState(class UWidget* TitleBarContent, EWindowTitleBarMode Mode, bool bTitleBarDragEnabled, bool bWindowButtonsVisible, bool bTitleBarVisible)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetWindowTitleBarState");
-
-	UWidgetBlueprintLibrary_SetWindowTitleBarState_Params params;
-	params.TitleBarContent = TitleBarContent;
-	params.Mode = Mode;
-	params.bTitleBarDragEnabled = bTitleBarDragEnabled;
-	params.bWindowButtonsVisible = bWindowButtonsVisible;
-	params.bTitleBarVisible = bTitleBarVisible;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.SetWindowTitleBarOnCloseClickedDelegate
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// struct FScriptDelegate         Delegate                       (Parm, ZeroConstructor)
-
-void UWidgetBlueprintLibrary::STATIC_SetWindowTitleBarOnCloseClickedDelegate(const struct FScriptDelegate& Delegate)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetWindowTitleBarOnCloseClickedDelegate");
-
-	UWidgetBlueprintLibrary_SetWindowTitleBarOnCloseClickedDelegate_Params params;
-	params.Delegate = Delegate;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.SetWindowTitleBarCloseButtonActive
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// bool                           bActive                        (Parm, ZeroConstructor, IsPlainOldData)
-
-void UWidgetBlueprintLibrary::STATIC_SetWindowTitleBarCloseButtonActive(bool bActive)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetWindowTitleBarCloseButtonActive");
-
-	UWidgetBlueprintLibrary_SetWindowTitleBarCloseButtonActive_Params params;
-	params.bActive = bActive;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.SetUserFocus
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
-// Parameters:
-// struct FEventReply             Reply                          (Parm, OutParm, ReferenceParm)
-// class UWidget*                 FocusWidget                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// bool                           bInAllUsers                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FEventReply UWidgetBlueprintLibrary::STATIC_SetUserFocus(class UWidget* FocusWidget, bool bInAllUsers, struct FEventReply* Reply)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetUserFocus");
-
-	UWidgetBlueprintLibrary_SetUserFocus_Params params;
-	params.FocusWidget = FocusWidget;
-	params.bInAllUsers = bInAllUsers;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (Reply != nullptr)
-		*Reply = params.Reply;
-
-	return params.ReturnValue;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.SetMousePosition
-// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
-// Parameters:
-// struct FEventReply             Reply                          (Parm, OutParm, ReferenceParm)
-// struct FVector2D               NewMousePosition               (Parm, ZeroConstructor, IsPlainOldData)
-// struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FEventReply UWidgetBlueprintLibrary::STATIC_SetMousePosition(const struct FVector2D& NewMousePosition, struct FEventReply* Reply)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetMousePosition");
-
-	UWidgetBlueprintLibrary_SetMousePosition_Params params;
-	params.NewMousePosition = NewMousePosition;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (Reply != nullptr)
-		*Reply = params.Reply;
-
-	return params.ReturnValue;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.SetInputMode_UIOnlyEx
-// (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
-// class UWidget*                 InWidgetToFocus                (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// EMouseLockMode                 InMouseLockMode                (Parm, ZeroConstructor, IsPlainOldData)
-
-void UWidgetBlueprintLibrary::STATIC_SetInputMode_UIOnlyEx(class APlayerController* PlayerController, class UWidget* InWidgetToFocus, EMouseLockMode InMouseLockMode)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetInputMode_UIOnlyEx");
-
-	UWidgetBlueprintLibrary_SetInputMode_UIOnlyEx_Params params;
-	params.PlayerController = PlayerController;
-	params.InWidgetToFocus = InWidgetToFocus;
-	params.InMouseLockMode = InMouseLockMode;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.SetInputMode_UIOnly
-// (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class APlayerController*       Target                         (Parm, ZeroConstructor, IsPlainOldData)
-// class UWidget*                 InWidgetToFocus                (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// bool                           bLockMouseToViewport           (Parm, ZeroConstructor, IsPlainOldData)
-
-void UWidgetBlueprintLibrary::STATIC_SetInputMode_UIOnly(class APlayerController* Target, class UWidget* InWidgetToFocus, bool bLockMouseToViewport)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetInputMode_UIOnly");
-
-	UWidgetBlueprintLibrary_SetInputMode_UIOnly_Params params;
-	params.Target = Target;
-	params.InWidgetToFocus = InWidgetToFocus;
-	params.bLockMouseToViewport = bLockMouseToViewport;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.SetInputMode_GameOnly
-// (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
-
-void UWidgetBlueprintLibrary::STATIC_SetInputMode_GameOnly(class APlayerController* PlayerController)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetInputMode_GameOnly");
-
-	UWidgetBlueprintLibrary_SetInputMode_GameOnly_Params params;
-	params.PlayerController = PlayerController;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.SetInputMode_GameAndUIEx
-// (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
-// class UWidget*                 InWidgetToFocus                (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// EMouseLockMode                 InMouseLockMode                (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bHideCursorDuringCapture       (Parm, ZeroConstructor, IsPlainOldData)
-
-void UWidgetBlueprintLibrary::STATIC_SetInputMode_GameAndUIEx(class APlayerController* PlayerController, class UWidget* InWidgetToFocus, EMouseLockMode InMouseLockMode, bool bHideCursorDuringCapture)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetInputMode_GameAndUIEx");
-
-	UWidgetBlueprintLibrary_SetInputMode_GameAndUIEx_Params params;
-	params.PlayerController = PlayerController;
-	params.InWidgetToFocus = InWidgetToFocus;
-	params.InMouseLockMode = InMouseLockMode;
-	params.bHideCursorDuringCapture = bHideCursorDuringCapture;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.SetInputMode_GameAndUI
-// (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class APlayerController*       Target                         (Parm, ZeroConstructor, IsPlainOldData)
-// class UWidget*                 InWidgetToFocus                (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// bool                           bLockMouseToViewport           (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bHideCursorDuringCapture       (Parm, ZeroConstructor, IsPlainOldData)
-
-void UWidgetBlueprintLibrary::STATIC_SetInputMode_GameAndUI(class APlayerController* Target, class UWidget* InWidgetToFocus, bool bLockMouseToViewport, bool bHideCursorDuringCapture)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetInputMode_GameAndUI");
-
-	UWidgetBlueprintLibrary_SetInputMode_GameAndUI_Params params;
-	params.Target = Target;
-	params.InWidgetToFocus = InWidgetToFocus;
-	params.bLockMouseToViewport = bLockMouseToViewport;
-	params.bHideCursorDuringCapture = bHideCursorDuringCapture;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.SetHardwareCursor
-// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<EMouseCursor>      CursorShape                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   CursorName                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector2D               HotSpot                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UWidgetBlueprintLibrary::STATIC_SetHardwareCursor(class UObject* WorldContextObject, TEnumAsByte<EMouseCursor> CursorShape, const struct FName& CursorName, const struct FVector2D& HotSpot)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetHardwareCursor");
-
-	UWidgetBlueprintLibrary_SetHardwareCursor_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.CursorShape = CursorShape;
-	params.CursorName = CursorName;
-	params.HotSpot = HotSpot;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.SetFocusToGameViewport
-// (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
-
-void UWidgetBlueprintLibrary::STATIC_SetFocusToGameViewport()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetFocusToGameViewport");
-
-	UWidgetBlueprintLibrary_SetFocusToGameViewport_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.SetBrushResourceToTexture
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// struct FSlateBrush             Brush                          (Parm, OutParm, ReferenceParm)
-// class UTexture2D*              Texture                        (Parm, ZeroConstructor, IsPlainOldData)
-
-void UWidgetBlueprintLibrary::STATIC_SetBrushResourceToTexture(class UTexture2D* Texture, struct FSlateBrush* Brush)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetBrushResourceToTexture");
-
-	UWidgetBlueprintLibrary_SetBrushResourceToTexture_Params params;
-	params.Texture = Texture;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (Brush != nullptr)
-		*Brush = params.Brush;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.SetBrushResourceToMaterial
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// struct FSlateBrush             Brush                          (Parm, OutParm, ReferenceParm)
-// class UMaterialInterface*      Material                       (Parm, ZeroConstructor, IsPlainOldData)
-
-void UWidgetBlueprintLibrary::STATIC_SetBrushResourceToMaterial(class UMaterialInterface* Material, struct FSlateBrush* Brush)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetBrushResourceToMaterial");
-
-	UWidgetBlueprintLibrary_SetBrushResourceToMaterial_Params params;
-	params.Material = Material;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (Brush != nullptr)
-		*Brush = params.Brush;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.RestorePreviousWindowTitleBarState
-// (Final, Native, Static, Public, BlueprintCallable)
-
-void UWidgetBlueprintLibrary::STATIC_RestorePreviousWindowTitleBarState()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.RestorePreviousWindowTitleBarState");
-
-	UWidgetBlueprintLibrary_RestorePreviousWindowTitleBarState_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.ReleaseMouseCapture
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
-// Parameters:
-// struct FEventReply             Reply                          (Parm, OutParm, ReferenceParm)
-// struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FEventReply UWidgetBlueprintLibrary::STATIC_ReleaseMouseCapture(struct FEventReply* Reply)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.ReleaseMouseCapture");
-
-	UWidgetBlueprintLibrary_ReleaseMouseCapture_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (Reply != nullptr)
-		*Reply = params.Reply;
-
-	return params.ReturnValue;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.ReleaseJoystickCapture
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
-// Parameters:
-// struct FEventReply             Reply                          (Parm, OutParm, ReferenceParm)
-// bool                           bInAllJoysticks                (Parm, ZeroConstructor, IsPlainOldData)
-// struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FEventReply UWidgetBlueprintLibrary::STATIC_ReleaseJoystickCapture(bool bInAllJoysticks, struct FEventReply* Reply)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.ReleaseJoystickCapture");
-
-	UWidgetBlueprintLibrary_ReleaseJoystickCapture_Params params;
-	params.bInAllJoysticks = bInAllJoysticks;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (Reply != nullptr)
-		*Reply = params.Reply;
-
-	return params.ReturnValue;
-}
-
-
-// DelegateFunction UMG.WidgetBlueprintLibrary.OnGameWindowCloseButtonClickedDelegate__DelegateSignature
-// (Public, Delegate)
-
-void UWidgetBlueprintLibrary::OnGameWindowCloseButtonClickedDelegate__DelegateSignature()
-{
-	static auto fn = UObject::FindObject<UFunction>("DelegateFunction UMG.WidgetBlueprintLibrary.OnGameWindowCloseButtonClickedDelegate__DelegateSignature");
-
-	UWidgetBlueprintLibrary_OnGameWindowCloseButtonClickedDelegate__DelegateSignature_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.NoResourceBrush
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// struct FSlateBrush             ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FSlateBrush UWidgetBlueprintLibrary::STATIC_NoResourceBrush()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.NoResourceBrush");
-
-	UWidgetBlueprintLibrary_NoResourceBrush_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.MakeBrushFromTexture
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// class UTexture2D*              Texture                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Width                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Height                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FSlateBrush             ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FSlateBrush UWidgetBlueprintLibrary::STATIC_MakeBrushFromTexture(class UTexture2D* Texture, int Width, int Height)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.MakeBrushFromTexture");
-
-	UWidgetBlueprintLibrary_MakeBrushFromTexture_Params params;
-	params.Texture = Texture;
-	params.Width = Width;
-	params.Height = Height;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.MakeBrushFromMaterial
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// class UMaterialInterface*      Material                       (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Width                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Height                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FSlateBrush             ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FSlateBrush UWidgetBlueprintLibrary::STATIC_MakeBrushFromMaterial(class UMaterialInterface* Material, int Width, int Height)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.MakeBrushFromMaterial");
-
-	UWidgetBlueprintLibrary_MakeBrushFromMaterial_Params params;
-	params.Material = Material;
-	params.Width = Width;
-	params.Height = Height;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.MakeBrushFromAsset
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// class USlateBrushAsset*        BrushAsset                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FSlateBrush             ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FSlateBrush UWidgetBlueprintLibrary::STATIC_MakeBrushFromAsset(class USlateBrushAsset* BrushAsset)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.MakeBrushFromAsset");
-
-	UWidgetBlueprintLibrary_MakeBrushFromAsset_Params params;
-	params.BrushAsset = BrushAsset;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.LockMouse
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
-// Parameters:
-// struct FEventReply             Reply                          (Parm, OutParm, ReferenceParm)
-// class UWidget*                 CapturingWidget                (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FEventReply UWidgetBlueprintLibrary::STATIC_LockMouse(class UWidget* CapturingWidget, struct FEventReply* Reply)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.LockMouse");
-
-	UWidgetBlueprintLibrary_LockMouse_Params params;
-	params.CapturingWidget = CapturingWidget;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (Reply != nullptr)
-		*Reply = params.Reply;
-
-	return params.ReturnValue;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.IsDragDropping
-// (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UWidgetBlueprintLibrary::STATIC_IsDragDropping()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.IsDragDropping");
-
-	UWidgetBlueprintLibrary_IsDragDropping_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.Handled
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FEventReply UWidgetBlueprintLibrary::STATIC_Handled()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.Handled");
-
-	UWidgetBlueprintLibrary_Handled_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.GetSafeZonePadding
-// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
-// Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector4                SafePadding                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// struct FVector2D               SafePaddingScale               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// struct FVector4                SpillOverPadding               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-
-void UWidgetBlueprintLibrary::STATIC_GetSafeZonePadding(class UObject* WorldContextObject, struct FVector4* SafePadding, struct FVector2D* SafePaddingScale, struct FVector4* SpillOverPadding)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetSafeZonePadding");
-
-	UWidgetBlueprintLibrary_GetSafeZonePadding_Params params;
-	params.WorldContextObject = WorldContextObject;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (SafePadding != nullptr)
-		*SafePadding = params.SafePadding;
-	if (SafePaddingScale != nullptr)
-		*SafePaddingScale = params.SafePaddingScale;
-	if (SpillOverPadding != nullptr)
-		*SpillOverPadding = params.SpillOverPadding;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.GetKeyEventFromAnalogInputEvent
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
-// Parameters:
-// struct FAnalogInputEvent       Event                          (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FKeyEvent               ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FKeyEvent UWidgetBlueprintLibrary::STATIC_GetKeyEventFromAnalogInputEvent(const struct FAnalogInputEvent& Event)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetKeyEventFromAnalogInputEvent");
-
-	UWidgetBlueprintLibrary_GetKeyEventFromAnalogInputEvent_Params params;
-	params.Event = Event;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.GetInputEventFromPointerEvent
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
-// Parameters:
-// struct FPointerEvent           Event                          (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FInputEvent             ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FInputEvent UWidgetBlueprintLibrary::STATIC_GetInputEventFromPointerEvent(const struct FPointerEvent& Event)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetInputEventFromPointerEvent");
-
-	UWidgetBlueprintLibrary_GetInputEventFromPointerEvent_Params params;
-	params.Event = Event;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.GetInputEventFromNavigationEvent
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
-// Parameters:
-// struct FNavigationEvent        Event                          (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FInputEvent             ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FInputEvent UWidgetBlueprintLibrary::STATIC_GetInputEventFromNavigationEvent(const struct FNavigationEvent& Event)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetInputEventFromNavigationEvent");
-
-	UWidgetBlueprintLibrary_GetInputEventFromNavigationEvent_Params params;
-	params.Event = Event;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.GetInputEventFromKeyEvent
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
-// Parameters:
-// struct FKeyEvent               Event                          (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FInputEvent             ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FInputEvent UWidgetBlueprintLibrary::STATIC_GetInputEventFromKeyEvent(const struct FKeyEvent& Event)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetInputEventFromKeyEvent");
-
-	UWidgetBlueprintLibrary_GetInputEventFromKeyEvent_Params params;
-	params.Event = Event;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.GetInputEventFromCharacterEvent
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
-// Parameters:
-// struct FCharacterEvent         Event                          (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FInputEvent             ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FInputEvent UWidgetBlueprintLibrary::STATIC_GetInputEventFromCharacterEvent(const struct FCharacterEvent& Event)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetInputEventFromCharacterEvent");
-
-	UWidgetBlueprintLibrary_GetInputEventFromCharacterEvent_Params params;
-	params.Event = Event;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.GetDynamicMaterial
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
-// Parameters:
-// struct FSlateBrush             Brush                          (Parm, OutParm, ReferenceParm)
-// class UMaterialInstanceDynamic* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class UMaterialInstanceDynamic* UWidgetBlueprintLibrary::STATIC_GetDynamicMaterial(struct FSlateBrush* Brush)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetDynamicMaterial");
-
-	UWidgetBlueprintLibrary_GetDynamicMaterial_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (Brush != nullptr)
-		*Brush = params.Brush;
-
-	return params.ReturnValue;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.GetDragDroppingContent
-// (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// class UDragDropOperation*      ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class UDragDropOperation* UWidgetBlueprintLibrary::STATIC_GetDragDroppingContent()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetDragDroppingContent");
-
-	UWidgetBlueprintLibrary_GetDragDroppingContent_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.GetBrushResourceAsTexture2D
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
-// Parameters:
-// struct FSlateBrush             Brush                          (ConstParm, Parm, OutParm, ReferenceParm)
-// class UTexture2D*              ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class UTexture2D* UWidgetBlueprintLibrary::STATIC_GetBrushResourceAsTexture2D(const struct FSlateBrush& Brush)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetBrushResourceAsTexture2D");
-
-	UWidgetBlueprintLibrary_GetBrushResourceAsTexture2D_Params params;
-	params.Brush = Brush;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.GetBrushResourceAsMaterial
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
-// Parameters:
-// struct FSlateBrush             Brush                          (ConstParm, Parm, OutParm, ReferenceParm)
-// class UMaterialInterface*      ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class UMaterialInterface* UWidgetBlueprintLibrary::STATIC_GetBrushResourceAsMaterial(const struct FSlateBrush& Brush)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetBrushResourceAsMaterial");
-
-	UWidgetBlueprintLibrary_GetBrushResourceAsMaterial_Params params;
-	params.Brush = Brush;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.GetBrushResource
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
-// Parameters:
-// struct FSlateBrush             Brush                          (ConstParm, Parm, OutParm, ReferenceParm)
-// class UObject*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class UObject* UWidgetBlueprintLibrary::STATIC_GetBrushResource(const struct FSlateBrush& Brush)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetBrushResource");
-
-	UWidgetBlueprintLibrary_GetBrushResource_Params params;
-	params.Brush = Brush;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.GetAllWidgetsWithInterface
-// (Final, BlueprintCosmetic, Native, Static, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class UClass*                  Interface                      (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<class UUserWidget*>     FoundWidgets                   (Parm, OutParm, ZeroConstructor)
-// bool                           TopLevelOnly                   (Parm, ZeroConstructor, IsPlainOldData)
-
-void UWidgetBlueprintLibrary::STATIC_GetAllWidgetsWithInterface(class UObject* WorldContextObject, class UClass* Interface, bool TopLevelOnly, TArray<class UUserWidget*>* FoundWidgets)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetAllWidgetsWithInterface");
-
-	UWidgetBlueprintLibrary_GetAllWidgetsWithInterface_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.Interface = Interface;
-	params.TopLevelOnly = TopLevelOnly;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (FoundWidgets != nullptr)
-		*FoundWidgets = params.FoundWidgets;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.GetAllWidgetsOfClass
-// (Final, BlueprintCosmetic, Native, Static, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<class UUserWidget*>     FoundWidgets                   (Parm, OutParm, ZeroConstructor)
-// class UClass*                  WidgetClass                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           TopLevelOnly                   (Parm, ZeroConstructor, IsPlainOldData)
-
-void UWidgetBlueprintLibrary::STATIC_GetAllWidgetsOfClass(class UObject* WorldContextObject, class UClass* WidgetClass, bool TopLevelOnly, TArray<class UUserWidget*>* FoundWidgets)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetAllWidgetsOfClass");
-
-	UWidgetBlueprintLibrary_GetAllWidgetsOfClass_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.WidgetClass = WidgetClass;
-	params.TopLevelOnly = TopLevelOnly;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (FoundWidgets != nullptr)
-		*FoundWidgets = params.FoundWidgets;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.EndDragDrop
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
-// Parameters:
-// struct FEventReply             Reply                          (Parm, OutParm, ReferenceParm)
-// struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FEventReply UWidgetBlueprintLibrary::STATIC_EndDragDrop(struct FEventReply* Reply)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.EndDragDrop");
-
-	UWidgetBlueprintLibrary_EndDragDrop_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (Reply != nullptr)
-		*Reply = params.Reply;
-
-	return params.ReturnValue;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.DrawTextFormatted
-// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FPaintContext           Context                        (Parm, OutParm, ReferenceParm)
-// struct FText                   Text                           (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FVector2D               Position                       (Parm, ZeroConstructor, IsPlainOldData)
-// class UFont*                   Font                           (Parm, ZeroConstructor, IsPlainOldData)
-// int                            FontSize                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   FontTypeFace                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FLinearColor            Tint                           (Parm, ZeroConstructor, IsPlainOldData)
-
-void UWidgetBlueprintLibrary::STATIC_DrawTextFormatted(const struct FText& Text, const struct FVector2D& Position, class UFont* Font, int FontSize, const struct FName& FontTypeFace, const struct FLinearColor& Tint, struct FPaintContext* Context)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.DrawTextFormatted");
-
-	UWidgetBlueprintLibrary_DrawTextFormatted_Params params;
-	params.Text = Text;
-	params.Position = Position;
-	params.Font = Font;
-	params.FontSize = FontSize;
-	params.FontTypeFace = FontTypeFace;
-	params.Tint = Tint;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (Context != nullptr)
-		*Context = params.Context;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.DrawText
-// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FPaintContext           Context                        (Parm, OutParm, ReferenceParm)
-// struct FString                 inString                       (Parm, ZeroConstructor)
-// struct FVector2D               Position                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FLinearColor            Tint                           (Parm, ZeroConstructor, IsPlainOldData)
-
-void UWidgetBlueprintLibrary::STATIC_DrawText(const struct FString& inString, const struct FVector2D& Position, const struct FLinearColor& Tint, struct FPaintContext* Context)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.DrawText");
-
-	UWidgetBlueprintLibrary_DrawText_Params params;
-	params.inString = inString;
-	params.Position = Position;
-	params.Tint = Tint;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (Context != nullptr)
-		*Context = params.Context;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.DrawLines
-// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FPaintContext           Context                        (Parm, OutParm, ReferenceParm)
-// TArray<struct FVector2D>       Points                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// struct FLinearColor            Tint                           (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bAntiAlias                     (Parm, ZeroConstructor, IsPlainOldData)
-
-void UWidgetBlueprintLibrary::STATIC_DrawLines(TArray<struct FVector2D> Points, const struct FLinearColor& Tint, bool bAntiAlias, struct FPaintContext* Context)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.DrawLines");
-
-	UWidgetBlueprintLibrary_DrawLines_Params params;
-	params.Points = Points;
-	params.Tint = Tint;
-	params.bAntiAlias = bAntiAlias;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (Context != nullptr)
-		*Context = params.Context;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.DrawLine
-// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FPaintContext           Context                        (Parm, OutParm, ReferenceParm)
-// struct FVector2D               PositionA                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector2D               PositionB                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FLinearColor            Tint                           (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bAntiAlias                     (Parm, ZeroConstructor, IsPlainOldData)
-
-void UWidgetBlueprintLibrary::STATIC_DrawLine(const struct FVector2D& PositionA, const struct FVector2D& PositionB, const struct FLinearColor& Tint, bool bAntiAlias, struct FPaintContext* Context)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.DrawLine");
-
-	UWidgetBlueprintLibrary_DrawLine_Params params;
-	params.PositionA = PositionA;
-	params.PositionB = PositionB;
-	params.Tint = Tint;
-	params.bAntiAlias = bAntiAlias;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (Context != nullptr)
-		*Context = params.Context;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.DrawBox
-// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FPaintContext           Context                        (Parm, OutParm, ReferenceParm)
-// struct FVector2D               Position                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector2D               Size                           (Parm, ZeroConstructor, IsPlainOldData)
-// class USlateBrushAsset*        Brush                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FLinearColor            Tint                           (Parm, ZeroConstructor, IsPlainOldData)
-
-void UWidgetBlueprintLibrary::STATIC_DrawBox(const struct FVector2D& Position, const struct FVector2D& Size, class USlateBrushAsset* Brush, const struct FLinearColor& Tint, struct FPaintContext* Context)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.DrawBox");
-
-	UWidgetBlueprintLibrary_DrawBox_Params params;
-	params.Position = Position;
-	params.Size = Size;
-	params.Brush = Brush;
-	params.Tint = Tint;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (Context != nullptr)
-		*Context = params.Context;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.DismissAllMenus
-// (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
-
-void UWidgetBlueprintLibrary::STATIC_DismissAllMenus()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.DismissAllMenus");
-
-	UWidgetBlueprintLibrary_DismissAllMenus_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.DetectDragIfPressed
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// struct FPointerEvent           PointerEvent                   (ConstParm, Parm, OutParm, ReferenceParm)
-// class UWidget*                 WidgetDetectingDrag            (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// struct FKey                    DragKey                        (Parm)
-// struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FEventReply UWidgetBlueprintLibrary::STATIC_DetectDragIfPressed(const struct FPointerEvent& PointerEvent, class UWidget* WidgetDetectingDrag, const struct FKey& DragKey)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.DetectDragIfPressed");
-
-	UWidgetBlueprintLibrary_DetectDragIfPressed_Params params;
-	params.PointerEvent = PointerEvent;
-	params.WidgetDetectingDrag = WidgetDetectingDrag;
-	params.DragKey = DragKey;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.DetectDrag
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
-// Parameters:
-// struct FEventReply             Reply                          (Parm, OutParm, ReferenceParm)
-// class UWidget*                 WidgetDetectingDrag            (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// struct FKey                    DragKey                        (Parm)
-// struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FEventReply UWidgetBlueprintLibrary::STATIC_DetectDrag(class UWidget* WidgetDetectingDrag, const struct FKey& DragKey, struct FEventReply* Reply)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.DetectDrag");
-
-	UWidgetBlueprintLibrary_DetectDrag_Params params;
-	params.WidgetDetectingDrag = WidgetDetectingDrag;
-	params.DragKey = DragKey;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (Reply != nullptr)
-		*Reply = params.Reply;
-
-	return params.ReturnValue;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.CreateDragDropOperation
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UClass*                  OperationClass                 (Parm, ZeroConstructor, IsPlainOldData)
-// class UDragDropOperation*      ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class UDragDropOperation* UWidgetBlueprintLibrary::STATIC_CreateDragDropOperation(class UClass* OperationClass)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.CreateDragDropOperation");
-
-	UWidgetBlueprintLibrary_CreateDragDropOperation_Params params;
-	params.OperationClass = OperationClass;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.Create
-// (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class UClass*                  WidgetType                     (Parm, ZeroConstructor, IsPlainOldData)
-// class APlayerController*       OwningPlayer                   (Parm, ZeroConstructor, IsPlainOldData)
-// class UUserWidget*             ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
-
-class UUserWidget* UWidgetBlueprintLibrary::STATIC_Create(class UObject* WorldContextObject, class UClass* WidgetType, class APlayerController* OwningPlayer)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.Create");
-
-	UWidgetBlueprintLibrary_Create_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.WidgetType = WidgetType;
-	params.OwningPlayer = OwningPlayer;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.ClearUserFocus
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
-// Parameters:
-// struct FEventReply             Reply                          (Parm, OutParm, ReferenceParm)
-// bool                           bInAllUsers                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FEventReply UWidgetBlueprintLibrary::STATIC_ClearUserFocus(bool bInAllUsers, struct FEventReply* Reply)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.ClearUserFocus");
-
-	UWidgetBlueprintLibrary_ClearUserFocus_Params params;
-	params.bInAllUsers = bInAllUsers;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (Reply != nullptr)
-		*Reply = params.Reply;
-
-	return params.ReturnValue;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.CaptureMouse
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
-// Parameters:
-// struct FEventReply             Reply                          (Parm, OutParm, ReferenceParm)
-// class UWidget*                 CapturingWidget                (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FEventReply UWidgetBlueprintLibrary::STATIC_CaptureMouse(class UWidget* CapturingWidget, struct FEventReply* Reply)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.CaptureMouse");
-
-	UWidgetBlueprintLibrary_CaptureMouse_Params params;
-	params.CapturingWidget = CapturingWidget;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (Reply != nullptr)
-		*Reply = params.Reply;
-
-	return params.ReturnValue;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.CaptureJoystick
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
-// Parameters:
-// struct FEventReply             Reply                          (Parm, OutParm, ReferenceParm)
-// class UWidget*                 CapturingWidget                (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// bool                           bInAllJoysticks                (Parm, ZeroConstructor, IsPlainOldData)
-// struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FEventReply UWidgetBlueprintLibrary::STATIC_CaptureJoystick(class UWidget* CapturingWidget, bool bInAllJoysticks, struct FEventReply* Reply)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.CaptureJoystick");
-
-	UWidgetBlueprintLibrary_CaptureJoystick_Params params;
-	params.CapturingWidget = CapturingWidget;
-	params.bInAllJoysticks = bInAllJoysticks;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (Reply != nullptr)
-		*Reply = params.Reply;
-
-	return params.ReturnValue;
-}
-
-
-// Function UMG.WidgetBlueprintLibrary.CancelDragDrop
-// (Final, Native, Static, Public, BlueprintCallable)
-
-void UWidgetBlueprintLibrary::STATIC_CancelDragDrop()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.CancelDragDrop");
-
-	UWidgetBlueprintLibrary_CancelDragDrop_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -13340,6 +11935,1411 @@ void UWrapBoxSlot::SetFillEmptySpace(bool InbFillEmptySpace)
 
 	UWrapBoxSlot_SetFillEmptySpace_Params params;
 	params.InbFillEmptySpace = InbFillEmptySpace;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.UnlockMouse
+// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FEventReply             Reply                          (Parm, OutParm, ReferenceParm)
+// struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FEventReply UWidgetBlueprintLibrary::STATIC_UnlockMouse(struct FEventReply* Reply)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.UnlockMouse");
+
+	UWidgetBlueprintLibrary_UnlockMouse_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Reply != nullptr)
+		*Reply = params.Reply;
+
+	return params.ReturnValue;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.Unhandled
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FEventReply UWidgetBlueprintLibrary::STATIC_Unhandled()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.Unhandled");
+
+	UWidgetBlueprintLibrary_Unhandled_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.SetWindowTitleBarState
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UWidget*                 TitleBarContent                (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// EWindowTitleBarMode            Mode                           (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bTitleBarDragEnabled           (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bWindowButtonsVisible          (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bTitleBarVisible               (Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidgetBlueprintLibrary::STATIC_SetWindowTitleBarState(class UWidget* TitleBarContent, EWindowTitleBarMode Mode, bool bTitleBarDragEnabled, bool bWindowButtonsVisible, bool bTitleBarVisible)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetWindowTitleBarState");
+
+	UWidgetBlueprintLibrary_SetWindowTitleBarState_Params params;
+	params.TitleBarContent = TitleBarContent;
+	params.Mode = Mode;
+	params.bTitleBarDragEnabled = bTitleBarDragEnabled;
+	params.bWindowButtonsVisible = bWindowButtonsVisible;
+	params.bTitleBarVisible = bTitleBarVisible;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.SetWindowTitleBarOnCloseClickedDelegate
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// struct FScriptDelegate         Delegate                       (Parm, ZeroConstructor)
+
+void UWidgetBlueprintLibrary::STATIC_SetWindowTitleBarOnCloseClickedDelegate(const struct FScriptDelegate& Delegate)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetWindowTitleBarOnCloseClickedDelegate");
+
+	UWidgetBlueprintLibrary_SetWindowTitleBarOnCloseClickedDelegate_Params params;
+	params.Delegate = Delegate;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.SetWindowTitleBarCloseButtonActive
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// bool                           bActive                        (Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidgetBlueprintLibrary::STATIC_SetWindowTitleBarCloseButtonActive(bool bActive)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetWindowTitleBarCloseButtonActive");
+
+	UWidgetBlueprintLibrary_SetWindowTitleBarCloseButtonActive_Params params;
+	params.bActive = bActive;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.SetUserFocus
+// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FEventReply             Reply                          (Parm, OutParm, ReferenceParm)
+// class UWidget*                 FocusWidget                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool                           bInAllUsers                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FEventReply UWidgetBlueprintLibrary::STATIC_SetUserFocus(class UWidget* FocusWidget, bool bInAllUsers, struct FEventReply* Reply)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetUserFocus");
+
+	UWidgetBlueprintLibrary_SetUserFocus_Params params;
+	params.FocusWidget = FocusWidget;
+	params.bInAllUsers = bInAllUsers;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Reply != nullptr)
+		*Reply = params.Reply;
+
+	return params.ReturnValue;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.SetMousePosition
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FEventReply             Reply                          (Parm, OutParm, ReferenceParm)
+// struct FVector2D               NewMousePosition               (Parm, ZeroConstructor, IsPlainOldData)
+// struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FEventReply UWidgetBlueprintLibrary::STATIC_SetMousePosition(const struct FVector2D& NewMousePosition, struct FEventReply* Reply)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetMousePosition");
+
+	UWidgetBlueprintLibrary_SetMousePosition_Params params;
+	params.NewMousePosition = NewMousePosition;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Reply != nullptr)
+		*Reply = params.Reply;
+
+	return params.ReturnValue;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.SetInputMode_UIOnlyEx
+// (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
+// class UWidget*                 InWidgetToFocus                (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// EMouseLockMode                 InMouseLockMode                (Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidgetBlueprintLibrary::STATIC_SetInputMode_UIOnlyEx(class APlayerController* PlayerController, class UWidget* InWidgetToFocus, EMouseLockMode InMouseLockMode)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetInputMode_UIOnlyEx");
+
+	UWidgetBlueprintLibrary_SetInputMode_UIOnlyEx_Params params;
+	params.PlayerController = PlayerController;
+	params.InWidgetToFocus = InWidgetToFocus;
+	params.InMouseLockMode = InMouseLockMode;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.SetInputMode_UIOnly
+// (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class APlayerController*       Target                         (Parm, ZeroConstructor, IsPlainOldData)
+// class UWidget*                 InWidgetToFocus                (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool                           bLockMouseToViewport           (Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidgetBlueprintLibrary::STATIC_SetInputMode_UIOnly(class APlayerController* Target, class UWidget* InWidgetToFocus, bool bLockMouseToViewport)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetInputMode_UIOnly");
+
+	UWidgetBlueprintLibrary_SetInputMode_UIOnly_Params params;
+	params.Target = Target;
+	params.InWidgetToFocus = InWidgetToFocus;
+	params.bLockMouseToViewport = bLockMouseToViewport;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.SetInputMode_GameOnly
+// (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidgetBlueprintLibrary::STATIC_SetInputMode_GameOnly(class APlayerController* PlayerController)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetInputMode_GameOnly");
+
+	UWidgetBlueprintLibrary_SetInputMode_GameOnly_Params params;
+	params.PlayerController = PlayerController;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.SetInputMode_GameAndUIEx
+// (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
+// class UWidget*                 InWidgetToFocus                (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// EMouseLockMode                 InMouseLockMode                (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bHideCursorDuringCapture       (Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidgetBlueprintLibrary::STATIC_SetInputMode_GameAndUIEx(class APlayerController* PlayerController, class UWidget* InWidgetToFocus, EMouseLockMode InMouseLockMode, bool bHideCursorDuringCapture)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetInputMode_GameAndUIEx");
+
+	UWidgetBlueprintLibrary_SetInputMode_GameAndUIEx_Params params;
+	params.PlayerController = PlayerController;
+	params.InWidgetToFocus = InWidgetToFocus;
+	params.InMouseLockMode = InMouseLockMode;
+	params.bHideCursorDuringCapture = bHideCursorDuringCapture;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.SetInputMode_GameAndUI
+// (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class APlayerController*       Target                         (Parm, ZeroConstructor, IsPlainOldData)
+// class UWidget*                 InWidgetToFocus                (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool                           bLockMouseToViewport           (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bHideCursorDuringCapture       (Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidgetBlueprintLibrary::STATIC_SetInputMode_GameAndUI(class APlayerController* Target, class UWidget* InWidgetToFocus, bool bLockMouseToViewport, bool bHideCursorDuringCapture)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetInputMode_GameAndUI");
+
+	UWidgetBlueprintLibrary_SetInputMode_GameAndUI_Params params;
+	params.Target = Target;
+	params.InWidgetToFocus = InWidgetToFocus;
+	params.bLockMouseToViewport = bLockMouseToViewport;
+	params.bHideCursorDuringCapture = bHideCursorDuringCapture;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.SetHardwareCursor
+// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EMouseCursor>      CursorShape                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName                   CursorName                     (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector2D               HotSpot                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UWidgetBlueprintLibrary::STATIC_SetHardwareCursor(class UObject* WorldContextObject, TEnumAsByte<EMouseCursor> CursorShape, const struct FName& CursorName, const struct FVector2D& HotSpot)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetHardwareCursor");
+
+	UWidgetBlueprintLibrary_SetHardwareCursor_Params params;
+	params.WorldContextObject = WorldContextObject;
+	params.CursorShape = CursorShape;
+	params.CursorName = CursorName;
+	params.HotSpot = HotSpot;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.SetFocusToGameViewport
+// (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
+
+void UWidgetBlueprintLibrary::STATIC_SetFocusToGameViewport()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetFocusToGameViewport");
+
+	UWidgetBlueprintLibrary_SetFocusToGameViewport_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.SetBrushResourceToTexture
+// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// struct FSlateBrush             Brush                          (Parm, OutParm, ReferenceParm)
+// class UTexture2D*              Texture                        (Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidgetBlueprintLibrary::STATIC_SetBrushResourceToTexture(class UTexture2D* Texture, struct FSlateBrush* Brush)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetBrushResourceToTexture");
+
+	UWidgetBlueprintLibrary_SetBrushResourceToTexture_Params params;
+	params.Texture = Texture;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Brush != nullptr)
+		*Brush = params.Brush;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.SetBrushResourceToMaterial
+// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// struct FSlateBrush             Brush                          (Parm, OutParm, ReferenceParm)
+// class UMaterialInterface*      Material                       (Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidgetBlueprintLibrary::STATIC_SetBrushResourceToMaterial(class UMaterialInterface* Material, struct FSlateBrush* Brush)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetBrushResourceToMaterial");
+
+	UWidgetBlueprintLibrary_SetBrushResourceToMaterial_Params params;
+	params.Material = Material;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Brush != nullptr)
+		*Brush = params.Brush;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.RestorePreviousWindowTitleBarState
+// (Final, Native, Static, Public, BlueprintCallable)
+
+void UWidgetBlueprintLibrary::STATIC_RestorePreviousWindowTitleBarState()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.RestorePreviousWindowTitleBarState");
+
+	UWidgetBlueprintLibrary_RestorePreviousWindowTitleBarState_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.ReleaseMouseCapture
+// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FEventReply             Reply                          (Parm, OutParm, ReferenceParm)
+// struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FEventReply UWidgetBlueprintLibrary::STATIC_ReleaseMouseCapture(struct FEventReply* Reply)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.ReleaseMouseCapture");
+
+	UWidgetBlueprintLibrary_ReleaseMouseCapture_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Reply != nullptr)
+		*Reply = params.Reply;
+
+	return params.ReturnValue;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.ReleaseJoystickCapture
+// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FEventReply             Reply                          (Parm, OutParm, ReferenceParm)
+// bool                           bInAllJoysticks                (Parm, ZeroConstructor, IsPlainOldData)
+// struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FEventReply UWidgetBlueprintLibrary::STATIC_ReleaseJoystickCapture(bool bInAllJoysticks, struct FEventReply* Reply)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.ReleaseJoystickCapture");
+
+	UWidgetBlueprintLibrary_ReleaseJoystickCapture_Params params;
+	params.bInAllJoysticks = bInAllJoysticks;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Reply != nullptr)
+		*Reply = params.Reply;
+
+	return params.ReturnValue;
+}
+
+
+// DelegateFunction UMG.WidgetBlueprintLibrary.OnGameWindowCloseButtonClickedDelegate__DelegateSignature
+// (Public, Delegate)
+
+void UWidgetBlueprintLibrary::OnGameWindowCloseButtonClickedDelegate__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("DelegateFunction UMG.WidgetBlueprintLibrary.OnGameWindowCloseButtonClickedDelegate__DelegateSignature");
+
+	UWidgetBlueprintLibrary_OnGameWindowCloseButtonClickedDelegate__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.NoResourceBrush
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FSlateBrush             ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FSlateBrush UWidgetBlueprintLibrary::STATIC_NoResourceBrush()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.NoResourceBrush");
+
+	UWidgetBlueprintLibrary_NoResourceBrush_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.MakeBrushFromTexture
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UTexture2D*              Texture                        (Parm, ZeroConstructor, IsPlainOldData)
+// int                            Width                          (Parm, ZeroConstructor, IsPlainOldData)
+// int                            Height                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FSlateBrush             ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FSlateBrush UWidgetBlueprintLibrary::STATIC_MakeBrushFromTexture(class UTexture2D* Texture, int Width, int Height)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.MakeBrushFromTexture");
+
+	UWidgetBlueprintLibrary_MakeBrushFromTexture_Params params;
+	params.Texture = Texture;
+	params.Width = Width;
+	params.Height = Height;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.MakeBrushFromMaterial
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UMaterialInterface*      Material                       (Parm, ZeroConstructor, IsPlainOldData)
+// int                            Width                          (Parm, ZeroConstructor, IsPlainOldData)
+// int                            Height                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FSlateBrush             ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FSlateBrush UWidgetBlueprintLibrary::STATIC_MakeBrushFromMaterial(class UMaterialInterface* Material, int Width, int Height)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.MakeBrushFromMaterial");
+
+	UWidgetBlueprintLibrary_MakeBrushFromMaterial_Params params;
+	params.Material = Material;
+	params.Width = Width;
+	params.Height = Height;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.MakeBrushFromAsset
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class USlateBrushAsset*        BrushAsset                     (Parm, ZeroConstructor, IsPlainOldData)
+// struct FSlateBrush             ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FSlateBrush UWidgetBlueprintLibrary::STATIC_MakeBrushFromAsset(class USlateBrushAsset* BrushAsset)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.MakeBrushFromAsset");
+
+	UWidgetBlueprintLibrary_MakeBrushFromAsset_Params params;
+	params.BrushAsset = BrushAsset;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.LockMouse
+// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FEventReply             Reply                          (Parm, OutParm, ReferenceParm)
+// class UWidget*                 CapturingWidget                (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FEventReply UWidgetBlueprintLibrary::STATIC_LockMouse(class UWidget* CapturingWidget, struct FEventReply* Reply)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.LockMouse");
+
+	UWidgetBlueprintLibrary_LockMouse_Params params;
+	params.CapturingWidget = CapturingWidget;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Reply != nullptr)
+		*Reply = params.Reply;
+
+	return params.ReturnValue;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.IsDragDropping
+// (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UWidgetBlueprintLibrary::STATIC_IsDragDropping()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.IsDragDropping");
+
+	UWidgetBlueprintLibrary_IsDragDropping_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.Handled
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FEventReply UWidgetBlueprintLibrary::STATIC_Handled()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.Handled");
+
+	UWidgetBlueprintLibrary_Handled_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.GetSafeZonePadding
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector4                SafePadding                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FVector2D               SafePaddingScale               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FVector4                SpillOverPadding               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void UWidgetBlueprintLibrary::STATIC_GetSafeZonePadding(class UObject* WorldContextObject, struct FVector4* SafePadding, struct FVector2D* SafePaddingScale, struct FVector4* SpillOverPadding)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetSafeZonePadding");
+
+	UWidgetBlueprintLibrary_GetSafeZonePadding_Params params;
+	params.WorldContextObject = WorldContextObject;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (SafePadding != nullptr)
+		*SafePadding = params.SafePadding;
+	if (SafePaddingScale != nullptr)
+		*SafePaddingScale = params.SafePaddingScale;
+	if (SpillOverPadding != nullptr)
+		*SpillOverPadding = params.SpillOverPadding;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.GetKeyEventFromAnalogInputEvent
+// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FAnalogInputEvent       Event                          (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FKeyEvent               ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FKeyEvent UWidgetBlueprintLibrary::STATIC_GetKeyEventFromAnalogInputEvent(const struct FAnalogInputEvent& Event)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetKeyEventFromAnalogInputEvent");
+
+	UWidgetBlueprintLibrary_GetKeyEventFromAnalogInputEvent_Params params;
+	params.Event = Event;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.GetInputEventFromPointerEvent
+// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FPointerEvent           Event                          (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FInputEvent             ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FInputEvent UWidgetBlueprintLibrary::STATIC_GetInputEventFromPointerEvent(const struct FPointerEvent& Event)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetInputEventFromPointerEvent");
+
+	UWidgetBlueprintLibrary_GetInputEventFromPointerEvent_Params params;
+	params.Event = Event;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.GetInputEventFromNavigationEvent
+// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FNavigationEvent        Event                          (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FInputEvent             ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FInputEvent UWidgetBlueprintLibrary::STATIC_GetInputEventFromNavigationEvent(const struct FNavigationEvent& Event)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetInputEventFromNavigationEvent");
+
+	UWidgetBlueprintLibrary_GetInputEventFromNavigationEvent_Params params;
+	params.Event = Event;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.GetInputEventFromKeyEvent
+// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FKeyEvent               Event                          (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FInputEvent             ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FInputEvent UWidgetBlueprintLibrary::STATIC_GetInputEventFromKeyEvent(const struct FKeyEvent& Event)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetInputEventFromKeyEvent");
+
+	UWidgetBlueprintLibrary_GetInputEventFromKeyEvent_Params params;
+	params.Event = Event;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.GetInputEventFromCharacterEvent
+// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FCharacterEvent         Event                          (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FInputEvent             ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FInputEvent UWidgetBlueprintLibrary::STATIC_GetInputEventFromCharacterEvent(const struct FCharacterEvent& Event)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetInputEventFromCharacterEvent");
+
+	UWidgetBlueprintLibrary_GetInputEventFromCharacterEvent_Params params;
+	params.Event = Event;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.GetDynamicMaterial
+// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FSlateBrush             Brush                          (Parm, OutParm, ReferenceParm)
+// class UMaterialInstanceDynamic* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UMaterialInstanceDynamic* UWidgetBlueprintLibrary::STATIC_GetDynamicMaterial(struct FSlateBrush* Brush)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetDynamicMaterial");
+
+	UWidgetBlueprintLibrary_GetDynamicMaterial_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Brush != nullptr)
+		*Brush = params.Brush;
+
+	return params.ReturnValue;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.GetDragDroppingContent
+// (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UDragDropOperation*      ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UDragDropOperation* UWidgetBlueprintLibrary::STATIC_GetDragDroppingContent()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetDragDroppingContent");
+
+	UWidgetBlueprintLibrary_GetDragDroppingContent_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.GetBrushResourceAsTexture2D
+// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FSlateBrush             Brush                          (ConstParm, Parm, OutParm, ReferenceParm)
+// class UTexture2D*              ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UTexture2D* UWidgetBlueprintLibrary::STATIC_GetBrushResourceAsTexture2D(const struct FSlateBrush& Brush)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetBrushResourceAsTexture2D");
+
+	UWidgetBlueprintLibrary_GetBrushResourceAsTexture2D_Params params;
+	params.Brush = Brush;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.GetBrushResourceAsMaterial
+// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FSlateBrush             Brush                          (ConstParm, Parm, OutParm, ReferenceParm)
+// class UMaterialInterface*      ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UMaterialInterface* UWidgetBlueprintLibrary::STATIC_GetBrushResourceAsMaterial(const struct FSlateBrush& Brush)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetBrushResourceAsMaterial");
+
+	UWidgetBlueprintLibrary_GetBrushResourceAsMaterial_Params params;
+	params.Brush = Brush;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.GetBrushResource
+// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FSlateBrush             Brush                          (ConstParm, Parm, OutParm, ReferenceParm)
+// class UObject*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UObject* UWidgetBlueprintLibrary::STATIC_GetBrushResource(const struct FSlateBrush& Brush)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetBrushResource");
+
+	UWidgetBlueprintLibrary_GetBrushResource_Params params;
+	params.Brush = Brush;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.GetAllWidgetsWithInterface
+// (Final, BlueprintCosmetic, Native, Static, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
+// class UClass*                  Interface                      (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<class UUserWidget*>     FoundWidgets                   (Parm, OutParm, ZeroConstructor)
+// bool                           TopLevelOnly                   (Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidgetBlueprintLibrary::STATIC_GetAllWidgetsWithInterface(class UObject* WorldContextObject, class UClass* Interface, bool TopLevelOnly, TArray<class UUserWidget*>* FoundWidgets)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetAllWidgetsWithInterface");
+
+	UWidgetBlueprintLibrary_GetAllWidgetsWithInterface_Params params;
+	params.WorldContextObject = WorldContextObject;
+	params.Interface = Interface;
+	params.TopLevelOnly = TopLevelOnly;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (FoundWidgets != nullptr)
+		*FoundWidgets = params.FoundWidgets;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.GetAllWidgetsOfClass
+// (Final, BlueprintCosmetic, Native, Static, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<class UUserWidget*>     FoundWidgets                   (Parm, OutParm, ZeroConstructor)
+// class UClass*                  WidgetClass                    (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           TopLevelOnly                   (Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidgetBlueprintLibrary::STATIC_GetAllWidgetsOfClass(class UObject* WorldContextObject, class UClass* WidgetClass, bool TopLevelOnly, TArray<class UUserWidget*>* FoundWidgets)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetAllWidgetsOfClass");
+
+	UWidgetBlueprintLibrary_GetAllWidgetsOfClass_Params params;
+	params.WorldContextObject = WorldContextObject;
+	params.WidgetClass = WidgetClass;
+	params.TopLevelOnly = TopLevelOnly;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (FoundWidgets != nullptr)
+		*FoundWidgets = params.FoundWidgets;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.EndDragDrop
+// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FEventReply             Reply                          (Parm, OutParm, ReferenceParm)
+// struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FEventReply UWidgetBlueprintLibrary::STATIC_EndDragDrop(struct FEventReply* Reply)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.EndDragDrop");
+
+	UWidgetBlueprintLibrary_EndDragDrop_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Reply != nullptr)
+		*Reply = params.Reply;
+
+	return params.ReturnValue;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.DrawTextFormatted
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FPaintContext           Context                        (Parm, OutParm, ReferenceParm)
+// struct FText                   Text                           (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FVector2D               Position                       (Parm, ZeroConstructor, IsPlainOldData)
+// class UFont*                   Font                           (Parm, ZeroConstructor, IsPlainOldData)
+// int                            FontSize                       (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName                   FontTypeFace                   (Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor            Tint                           (Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidgetBlueprintLibrary::STATIC_DrawTextFormatted(const struct FText& Text, const struct FVector2D& Position, class UFont* Font, int FontSize, const struct FName& FontTypeFace, const struct FLinearColor& Tint, struct FPaintContext* Context)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.DrawTextFormatted");
+
+	UWidgetBlueprintLibrary_DrawTextFormatted_Params params;
+	params.Text = Text;
+	params.Position = Position;
+	params.Font = Font;
+	params.FontSize = FontSize;
+	params.FontTypeFace = FontTypeFace;
+	params.Tint = Tint;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Context != nullptr)
+		*Context = params.Context;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.DrawText
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FPaintContext           Context                        (Parm, OutParm, ReferenceParm)
+// struct FString                 inString                       (Parm, ZeroConstructor)
+// struct FVector2D               Position                       (Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor            Tint                           (Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidgetBlueprintLibrary::STATIC_DrawText(const struct FString& inString, const struct FVector2D& Position, const struct FLinearColor& Tint, struct FPaintContext* Context)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.DrawText");
+
+	UWidgetBlueprintLibrary_DrawText_Params params;
+	params.inString = inString;
+	params.Position = Position;
+	params.Tint = Tint;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Context != nullptr)
+		*Context = params.Context;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.DrawLines
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FPaintContext           Context                        (Parm, OutParm, ReferenceParm)
+// TArray<struct FVector2D>       Points                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FLinearColor            Tint                           (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bAntiAlias                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidgetBlueprintLibrary::STATIC_DrawLines(TArray<struct FVector2D> Points, const struct FLinearColor& Tint, bool bAntiAlias, struct FPaintContext* Context)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.DrawLines");
+
+	UWidgetBlueprintLibrary_DrawLines_Params params;
+	params.Points = Points;
+	params.Tint = Tint;
+	params.bAntiAlias = bAntiAlias;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Context != nullptr)
+		*Context = params.Context;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.DrawLine
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FPaintContext           Context                        (Parm, OutParm, ReferenceParm)
+// struct FVector2D               PositionA                      (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector2D               PositionB                      (Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor            Tint                           (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bAntiAlias                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidgetBlueprintLibrary::STATIC_DrawLine(const struct FVector2D& PositionA, const struct FVector2D& PositionB, const struct FLinearColor& Tint, bool bAntiAlias, struct FPaintContext* Context)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.DrawLine");
+
+	UWidgetBlueprintLibrary_DrawLine_Params params;
+	params.PositionA = PositionA;
+	params.PositionB = PositionB;
+	params.Tint = Tint;
+	params.bAntiAlias = bAntiAlias;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Context != nullptr)
+		*Context = params.Context;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.DrawBox
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FPaintContext           Context                        (Parm, OutParm, ReferenceParm)
+// struct FVector2D               Position                       (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector2D               Size                           (Parm, ZeroConstructor, IsPlainOldData)
+// class USlateBrushAsset*        Brush                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor            Tint                           (Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidgetBlueprintLibrary::STATIC_DrawBox(const struct FVector2D& Position, const struct FVector2D& Size, class USlateBrushAsset* Brush, const struct FLinearColor& Tint, struct FPaintContext* Context)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.DrawBox");
+
+	UWidgetBlueprintLibrary_DrawBox_Params params;
+	params.Position = Position;
+	params.Size = Size;
+	params.Brush = Brush;
+	params.Tint = Tint;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Context != nullptr)
+		*Context = params.Context;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.DismissAllMenus
+// (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
+
+void UWidgetBlueprintLibrary::STATIC_DismissAllMenus()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.DismissAllMenus");
+
+	UWidgetBlueprintLibrary_DismissAllMenus_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.DetectDragIfPressed
+// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// struct FPointerEvent           PointerEvent                   (ConstParm, Parm, OutParm, ReferenceParm)
+// class UWidget*                 WidgetDetectingDrag            (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FKey                    DragKey                        (Parm)
+// struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FEventReply UWidgetBlueprintLibrary::STATIC_DetectDragIfPressed(const struct FPointerEvent& PointerEvent, class UWidget* WidgetDetectingDrag, const struct FKey& DragKey)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.DetectDragIfPressed");
+
+	UWidgetBlueprintLibrary_DetectDragIfPressed_Params params;
+	params.PointerEvent = PointerEvent;
+	params.WidgetDetectingDrag = WidgetDetectingDrag;
+	params.DragKey = DragKey;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.DetectDrag
+// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FEventReply             Reply                          (Parm, OutParm, ReferenceParm)
+// class UWidget*                 WidgetDetectingDrag            (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FKey                    DragKey                        (Parm)
+// struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FEventReply UWidgetBlueprintLibrary::STATIC_DetectDrag(class UWidget* WidgetDetectingDrag, const struct FKey& DragKey, struct FEventReply* Reply)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.DetectDrag");
+
+	UWidgetBlueprintLibrary_DetectDrag_Params params;
+	params.WidgetDetectingDrag = WidgetDetectingDrag;
+	params.DragKey = DragKey;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Reply != nullptr)
+		*Reply = params.Reply;
+
+	return params.ReturnValue;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.CreateDragDropOperation
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UClass*                  OperationClass                 (Parm, ZeroConstructor, IsPlainOldData)
+// class UDragDropOperation*      ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UDragDropOperation* UWidgetBlueprintLibrary::STATIC_CreateDragDropOperation(class UClass* OperationClass)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.CreateDragDropOperation");
+
+	UWidgetBlueprintLibrary_CreateDragDropOperation_Params params;
+	params.OperationClass = OperationClass;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.Create
+// (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
+// class UClass*                  WidgetType                     (Parm, ZeroConstructor, IsPlainOldData)
+// class APlayerController*       OwningPlayer                   (Parm, ZeroConstructor, IsPlainOldData)
+// class UUserWidget*             ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+
+class UUserWidget* UWidgetBlueprintLibrary::STATIC_Create(class UObject* WorldContextObject, class UClass* WidgetType, class APlayerController* OwningPlayer)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.Create");
+
+	UWidgetBlueprintLibrary_Create_Params params;
+	params.WorldContextObject = WorldContextObject;
+	params.WidgetType = WidgetType;
+	params.OwningPlayer = OwningPlayer;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.ClearUserFocus
+// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FEventReply             Reply                          (Parm, OutParm, ReferenceParm)
+// bool                           bInAllUsers                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FEventReply UWidgetBlueprintLibrary::STATIC_ClearUserFocus(bool bInAllUsers, struct FEventReply* Reply)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.ClearUserFocus");
+
+	UWidgetBlueprintLibrary_ClearUserFocus_Params params;
+	params.bInAllUsers = bInAllUsers;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Reply != nullptr)
+		*Reply = params.Reply;
+
+	return params.ReturnValue;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.CaptureMouse
+// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FEventReply             Reply                          (Parm, OutParm, ReferenceParm)
+// class UWidget*                 CapturingWidget                (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FEventReply UWidgetBlueprintLibrary::STATIC_CaptureMouse(class UWidget* CapturingWidget, struct FEventReply* Reply)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.CaptureMouse");
+
+	UWidgetBlueprintLibrary_CaptureMouse_Params params;
+	params.CapturingWidget = CapturingWidget;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Reply != nullptr)
+		*Reply = params.Reply;
+
+	return params.ReturnValue;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.CaptureJoystick
+// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FEventReply             Reply                          (Parm, OutParm, ReferenceParm)
+// class UWidget*                 CapturingWidget                (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool                           bInAllJoysticks                (Parm, ZeroConstructor, IsPlainOldData)
+// struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FEventReply UWidgetBlueprintLibrary::STATIC_CaptureJoystick(class UWidget* CapturingWidget, bool bInAllJoysticks, struct FEventReply* Reply)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.CaptureJoystick");
+
+	UWidgetBlueprintLibrary_CaptureJoystick_Params params;
+	params.CapturingWidget = CapturingWidget;
+	params.bInAllJoysticks = bInAllJoysticks;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Reply != nullptr)
+		*Reply = params.Reply;
+
+	return params.ReturnValue;
+}
+
+
+// Function UMG.WidgetBlueprintLibrary.CancelDragDrop
+// (Final, Native, Static, Public, BlueprintCallable)
+
+void UWidgetBlueprintLibrary::STATIC_CancelDragDrop()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.CancelDragDrop");
+
+	UWidgetBlueprintLibrary_CancelDragDrop_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;

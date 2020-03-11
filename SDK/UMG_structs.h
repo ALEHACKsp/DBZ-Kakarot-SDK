@@ -111,13 +111,14 @@ enum class EWidgetGeometryMode : uint8_t
 };
 
 
-// Enum UMG.EWidgetBlendMode
-enum class EWidgetBlendMode : uint8_t
+// Enum UMG.EDynamicBoxType
+enum class EDynamicBoxType : uint8_t
 {
-	EWidgetBlendMode__Opaque       = 0,
-	EWidgetBlendMode__Masked       = 1,
-	EWidgetBlendMode__Transparent  = 2,
-	EWidgetBlendMode__EWidgetBlendMode_MAX = 3
+	EDynamicBoxType__Horizontal    = 0,
+	EDynamicBoxType__Vertical      = 1,
+	EDynamicBoxType__Wrap          = 2,
+	EDynamicBoxType__Overlay       = 3,
+	EDynamicBoxType__EDynamicBoxType_MAX = 4
 };
 
 
@@ -150,14 +151,13 @@ enum class EWidgetInteractionSource : uint8_t
 };
 
 
-// Enum UMG.EDynamicBoxType
-enum class EDynamicBoxType : uint8_t
+// Enum UMG.EWidgetBlendMode
+enum class EWidgetBlendMode : uint8_t
 {
-	EDynamicBoxType__Horizontal    = 0,
-	EDynamicBoxType__Vertical      = 1,
-	EDynamicBoxType__Wrap          = 2,
-	EDynamicBoxType__Overlay       = 3,
-	EDynamicBoxType__EDynamicBoxType_MAX = 4
+	EWidgetBlendMode__Opaque       = 0,
+	EWidgetBlendMode__Masked       = 1,
+	EWidgetBlendMode__Transparent  = 2,
+	EWidgetBlendMode__EWidgetBlendMode_MAX = 3
 };
 
 

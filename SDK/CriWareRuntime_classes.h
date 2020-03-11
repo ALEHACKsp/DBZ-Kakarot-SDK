@@ -241,24 +241,6 @@ public:
 };
 
 
-// Class CriWareRuntime.AtomProfileData
-// 0x0000 (0x0028 - 0x0028)
-class UAtomProfileData : public UBlueprintFunctionLibrary
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class CriWareRuntime.AtomProfileData");
-		return ptr;
-	}
-
-
-	TArray<struct FAtomProfileItem> STATIC_CriWareAdx2ProfileDataUpdate(class UObject* WorldContextObject);
-	void STATIC_CriWareAdx2ProfileDataSort(TArray<struct FAtomProfileItem> original_item, EAtomProfileSortType sort_type, EAtomSortOrderType order_type, TArray<struct FAtomProfileItem>* sorted_item);
-};
-
-
 // Class CriWareRuntime.AtomSound
 // 0x0008 (0x0340 - 0x0338)
 class AAtomSound : public AActor
@@ -1203,6 +1185,24 @@ public:
 	void STATIC_DetachDspBusSetting();
 	void STATIC_AttachDspBusSetting(const struct FString& SettingName);
 	void STATIC_ApplyDspBusSnapshot(const struct FString& SnapshotName, int Milliseconds);
+};
+
+
+// Class CriWareRuntime.AtomProfileData
+// 0x0000 (0x0028 - 0x0028)
+class UAtomProfileData : public UBlueprintFunctionLibrary
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class CriWareRuntime.AtomProfileData");
+		return ptr;
+	}
+
+
+	TArray<struct FAtomProfileItem> STATIC_CriWareAdx2ProfileDataUpdate(class UObject* WorldContextObject);
+	void STATIC_CriWareAdx2ProfileDataSort(TArray<struct FAtomProfileItem> original_item, EAtomProfileSortType sort_type, EAtomSortOrderType order_type, TArray<struct FAtomProfileItem>* sorted_item);
 };
 
 

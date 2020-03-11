@@ -61,16 +61,6 @@ enum class EDrivenDestinationMode : uint8_t
 };
 
 
-// Enum AnimGraphRuntime.EDrivenBoneModificationMode
-enum class EDrivenBoneModificationMode : uint8_t
-{
-	EDrivenBoneModificationMode__AddToInput = 0,
-	EDrivenBoneModificationMode__ReplaceComponent = 1,
-	EDrivenBoneModificationMode__AddToRefPose = 2,
-	EDrivenBoneModificationMode__EDrivenBoneModificationMode_MAX = 3
-};
-
-
 // Enum AnimGraphRuntime.EConstraintOffsetOption
 enum class EConstraintOffsetOption : uint8_t
 {
@@ -122,15 +112,6 @@ enum class EModifyCurveApplyMode : uint8_t
 	EModifyCurveApplyMode__WeightedMovingAverage = 3,
 	EModifyCurveApplyMode__RemapCurve = 4,
 	EModifyCurveApplyMode__EModifyCurveApplyMode_MAX = 5
-};
-
-
-// Enum AnimGraphRuntime.EPoseDriverOutput
-enum class EPoseDriverOutput : uint8_t
-{
-	EPoseDriverOutput__DrivePoses  = 0,
-	EPoseDriverOutput__DriveCurves = 1,
-	EPoseDriverOutput__EPoseDriverOutput_MAX = 2
 };
 
 
@@ -230,6 +211,25 @@ enum class ERBFFunctionType : uint8_t
 	ERBFFunctionType__Cubic        = 3,
 	ERBFFunctionType__Quintic      = 4,
 	ERBFFunctionType__ERBFFunctionType_MAX = 5
+};
+
+
+// Enum AnimGraphRuntime.EPoseDriverOutput
+enum class EPoseDriverOutput : uint8_t
+{
+	EPoseDriverOutput__DrivePoses  = 0,
+	EPoseDriverOutput__DriveCurves = 1,
+	EPoseDriverOutput__EPoseDriverOutput_MAX = 2
+};
+
+
+// Enum AnimGraphRuntime.EDrivenBoneModificationMode
+enum class EDrivenBoneModificationMode : uint8_t
+{
+	EDrivenBoneModificationMode__AddToInput = 0,
+	EDrivenBoneModificationMode__ReplaceComponent = 1,
+	EDrivenBoneModificationMode__AddToRefPose = 2,
+	EDrivenBoneModificationMode__EDrivenBoneModificationMode_MAX = 3
 };
 
 
@@ -781,13 +781,6 @@ struct FAnimNode_LegIK : public FAnimNode_SkeletalControlBase
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0118(0x0008) MISSED OFFSET
 };
 
-// ScriptStruct AnimGraphRuntime.IKChain
-// 0x0040
-struct FIKChain
-{
-	unsigned char                                      UnknownData00[0x40];                                      // 0x0000(0x0040) MISSED OFFSET
-};
-
 // ScriptStruct AnimGraphRuntime.IKChainLink
 // 0x0040
 struct FIKChainLink
@@ -820,6 +813,13 @@ struct FAnimNode_ModifyBone : public FAnimNode_SkeletalControlBase
 	TEnumAsByte<EBoneControlSpace>                     RotationSpace;                                            // 0x0130(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<EBoneControlSpace>                     ScaleSpace;                                               // 0x0131(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x6];                                       // 0x0132(0x0006) MISSED OFFSET
+};
+
+// ScriptStruct AnimGraphRuntime.IKChain
+// 0x0040
+struct FIKChain
+{
+	unsigned char                                      UnknownData00[0x40];                                      // 0x0000(0x0040) MISSED OFFSET
 };
 
 // ScriptStruct AnimGraphRuntime.AnimNode_ModifyCurve
